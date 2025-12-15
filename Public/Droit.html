@@ -1,251 +1,147 @@
 <!DOCTYPE html>
 <html lang="fr">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Droits des jeunes | FAGE</title>
-    <link rel="icon"
-        href="https://img.freepik.com/vecteurs-premium/lettre-f-bleue-blanche-est-fond-bleu_462839-1528.jpg"
-        type="image/jpeg">
-    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="icon" href="https://img.freepik.com/vecteurs-premium/lettre-f-bleue-blanche-est-fond-bleu_462839-1528.jpg" type="image/jpeg">
     <link rel="stylesheet" href="style.css">
-    <style>
-        /* Styles pour la FAQ accordéon */
-        .faq-item button {
-            transition: background-color 0.3s, transform 0.2s;
-        }
-
-        .faq-item button:hover {
-            transform: scale(1.02);
-        }
-
-        .faq-body {
-            max-height: 0;
-            overflow: hidden;
-            transition: max-height 0.4s ease, padding 0.4s ease;
-        }
-
-        .faq-body.open {
-            max-height: 500px;
-            padding-top: 1rem;
-            padding-bottom: 1rem;
-        }
-    </style>
 </head>
+<body>
 
-<body class="bg-gray-50 font-sans text-gray-900">
-
-    <!-- NAVBAR -->
- <nav class="fixed w-full z-50 bg-gradient-to-r from-blue-500 to-blue-400 text-white shadow-lg">
-    <div class="max-w-7xl mx-auto flex items-center justify-between p-4 lg:py-2">
-        <a href="#" class="flex items-center">
-            <img src="https://ageparis.org/agepwebcontent/uploads/2013/01/fage-blanc-logo-min.png" alt="Logo FAGE" class="w-28 lg:w-20">
+<nav class="navbar">
+    <div class="nav-container">
+        <a href="index.html" class="nav-logo">
+            <img src="https://ageparis.org/agepwebcontent/uploads/2013/01/fage-blanc-logo-min.png" alt="Logo FAGE">
         </a>
-
-        <!-- Bouton hamburger pour mobile -->
-        <div class="lg:hidden">
-            <button id="menu-btn" class="focus:outline-none">
-                <!-- Trois barres -->
-                <span class="block w-6 h-0.5 bg-white mb-1"></span>
-                <span class="block w-6 h-0.5 bg-white mb-1"></span>
-                <span class="block w-6 h-0.5 bg-white"></span>
-            </button>
-        </div>
-
-        <!-- Menu desktop -->
-        <ul class="hidden lg:flex space-x-8 text-white font-medium">
-            <li><a href="index.html" class="hover:text-gray-200">Accueil</a></li>
-            <li><a href="Fage.html" class="hover:text-gray-200">La FAGE</a></li>
-            <li><a href="Droit.html" class="hover:text-gray-200 font-bold">Nos Droits</a></li>
-            <li><a href="formationFage.html" class="hover:text-gray-200">Formation Fage</a></li>
-            <li><a href="guideElu.html" class="hover:text-gray-200">Le Guide</a></li>
-            <li><a href="actualites.html" class="hover:text-gray-200">Les Actualités</a></li>
+        <button id="menu-btn" class="hamburger"><span></span><span></span><span></span></button>
+        <ul class="nav-links">
+            <li><a href="index.html">Accueil</a></li>
+            <li><a href="Fage.html">La FAGE</a></li>
+            <li><a href="Droit.html" class="active">Nos Droits</a></li>
+            <li><a href="formationFage.html">Formation</a></li>
+            <li><a href="guideElu.html">Le Guide</a></li>
+            <li><a href="scolariteEtudiant.html">Scolarité</a></li>
+            <li><a href="ScolaritéEtudiant2.html">Civique</a></li>
+            <li><a href="read.html">Coût rentrée</a></li>
         </ul>
     </div>
-
-    <!-- Menu mobile -->
-    <ul id="mobile-menu" class="lg:hidden hidden flex-col bg-gradient-to-r from-blue-500 to-blue-400 text-white font-medium px-4 pt-2 pb-4 space-y-2">
-        <li><a href="index.html" class="block hover:text-gray-200">Accueil</a></li>
-        <li><a href="Fage.html" class="block hover:text-gray-200">La FAGE</a></li>
-        <li><a href="Droit.html" class="block hover:text-gray-200 font-bold">Nos Droits</a></li>
-        <li><a href="formationFage.html" class="block hover:text-gray-200">Formation Fage</a></li>
-        <li><a href="guideElu.html" class="block hover:text-gray-200">Le Guide</a></li>
-        <li><a href="actualites.html" class="block hover:text-gray-200">Les Actualités</a></li>
+    <ul id="mobile-menu" class="mobile-menu">
+        <li><a href="index.html">Accueil</a></li>
+        <li><a href="Fage.html">La FAGE</a></li>
+        <li><a href="Droit.html">Nos Droits</a></li>
+        <li><a href="formationFage.html">Formation</a></li>
+        <li><a href="guideElu.html">Le Guide</a></li>
+        <li><a href="scolariteEtudiant.html">Scolarité</a></li>
+        <li><a href="ScolaritéEtudiant2.html">Civique</a></li>
+        <li><a href="read.html">Coût rentrée</a></li>
     </ul>
 </nav>
 
-<script>
-    // Toggle menu mobile
-    const menuBtn = document.getElementById('menu-btn');
-    const mobileMenu = document.getElementById('mobile-menu');
+<main class="container">
+<br><br>
+    <section class="hero-gradient reveal">
+        <div class="hero-text">
+            <h1 style="font-size: 3rem; font-weight: 800; margin-bottom: 1rem;">Droits des jeunes et étudiant·e·s</h1>
+            <p style="font-size: 1.2rem;">Découvrez vos droits, comment les faire respecter et l’accompagnement de la FAGE.</p>
+        </div>
+        <div class="hero-img">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRIDgkkV2rwTwES1IOj0ksIS4ZCyrl3MChFHQ&s" alt="Droits" style="border-radius: 1rem; box-shadow: 0 10px 15px -3px rgba(0,0,0,0.2);">
+        </div>
+    </section>
 
-    menuBtn.addEventListener('click', () => {
-      mobileMenu.classList.toggle('hidden');
-    });
-</script>
+    <section class="card reveal" style="margin-bottom: 3rem;">
+        <h2 style="font-size: 2rem; color: var(--primary-blue); margin-bottom: 1.5rem; font-weight: 700;">La défense des droits</h2>
+        <p style="margin-bottom: 1rem;">
+            La FAGE constate que de nombreux jeunes ne connaissent pas leurs droits. Elle propose des ressources claires et un accompagnement.
+        </p>
+        <p style="margin-bottom: 1rem;">
+            Ligne d'écoute : <a href="mailto:formation@fage.org" style="color: var(--primary-blue); font-weight: bold;">06 32 64 96 54</a></p>
+        </p>
+        <p>
+            Contact par mail : <a href="mailto:formation@fage.org" style="color: var(--primary-blue); font-weight: bold;">formation@fage.org</a></p>
+        </p>
+    </section>
 
+    <section class="reveal">
+        <h2 style="font-size: 2rem; font-weight: 700; margin-bottom: 1.5rem;">Foire aux questions</h2>
+        <p style="margin-bottom: 1.5rem; color: #666;">Cliquez sur une question pour afficher la réponse.</p>
 
-    <main class="pt-32 max-w-7xl mx-auto px-4 space-y-12">
-
-        <!-- HERO -->
-        <section
-            class="bg-gradient-to-r from-blue-500 to-blue-400 text-white rounded-2xl p-10 shadow-2xl flex flex-col md:flex-row items-center md:justify-between">
-            <div class="md:w-2/3">
-                <h1 class="text-4xl md:text-5xl font-extrabold mb-4 leading-tight">Droits des jeunes et étudiant·e·s
-                </h1>
-                <p class="text-lg md:text-xl">Découvrez vos droits, comment les faire respecter et l’accompagnement de
-                    la FAGE.</p>
-            </div>
-            <div class="md:w-1/3 mt-6 md:mt-0">
-                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRIDgkkV2rwTwES1IOj0ksIS4ZCyrl3MChFHQ&s"
-                    alt="Droits" class="rounded-xl shadow-xl w-full hover:scale-105 transition-transform duration-300">
-            </div>
-        </section>
-
-        <!-- Contenu principal - Défense des droits -->
-        <section class="bg-white rounded-2xl shadow-lg p-8 hover:shadow-2xl transition-all duration-300 space-y-6">
-            <h2 class="text-3xl font-bold text-blue-600">La défense des droits</h2>
-            <p class="text-gray-700 leading-relaxed">
-                La FAGE constate que de nombreux jeunes ne connaissent pas leurs droits ou ne les utilisent pas. Pour y
-                remédier, elle propose des ressources claires et un accompagnement pour que chaque étudiant·e puisse
-                accéder à ses droits et les faire respecter.
-            </p>
-            <p class="text-gray-700 leading-relaxed">
-                Pour toute question, la FAGE et ses fédérations sont disponibles. Consultez notre carte interactive pour
-                trouver le contact défense des droits près de chez vous.
-            </p>
-            <p class="text-gray-700 leading-relaxed">
-                La FAGE agit sur deux axes : faciliter l’accès aux droits et défendre ces droits.
-            </p>
-            <p class="text-gray-700 leading-relaxed">
-                Ligne d'écoute : <strong>06 32 64 96 54</strong>
-            </p>
-            <p class="text-gray-700 leading-relaxed">
-                Contact par mail : <a href="mailto:mesdroits@fage.org"
-                    class="text-blue-600 underline">mesdroits@fage.org</a>. Une équipe de bénévoles accompagne et suit
-                les jeunes pour résoudre leurs problèmes efficacement.
-            </p>
-        </section>
-
-        <!-- FAQ -->
-        <section class="bg-white rounded-2xl shadow-lg p-8 hover:shadow-2xl transition-all duration-300 space-y-6">
-            <h2 class="text-3xl font-bold text-blue-600 mb-4">Foire aux questions</h2>
-            <p class="text-gray-700 mb-4"><strong>Cliquez sur une question pour afficher la réponse.</strong></p>
-
-            <div class="space-y-4">
-                <!-- Question 1 -->
-                <div class="faq-item">
-                    <button
-                        class="w-full text-left p-4 bg-blue-50 rounded-lg font-semibold text-blue-700 hover:bg-blue-100">
-                        Introduction globale sur les droits des jeunes et étudiant·e·s
-                    </button>
-                    <div class="faq-body p-0 text-gray-700 rounded-lg bg-blue-50">
-                        <p class="px-4">
-                            La FAQ est née d’un constat : beaucoup de jeunes ne connaissent pas leurs droits. La FAGE
-                            propose des informations et un accompagnement pour que chacun·e puisse accéder à ses droits.
-                        </p>
-                    </div>
-                </div>
-
-                <!-- Question 2 -->
-                <div class="faq-item">
-                    <button
-                        class="w-full text-left p-4 bg-green-50 rounded-lg font-semibold text-green-700 hover:bg-green-100">
-                        L’action de la FAGE : accompagnement et communication
-                    </button>
-                    <div class="faq-body p-0 text-gray-700 rounded-lg bg-green-50">
-                        <p class="px-4">
-                            La FAGE informe sur les dispositifs existants et accompagne les jeunes via le mail <a
-                                href="mailto:mesdroits@fage.org" class="text-blue-600 underline">mesdroits@fage.org</a>
-                            pour les aider dans leurs démarches.
-                        </p>
-                    </div>
-                </div>
-
-                <!-- Question 3 -->
-                <div class="faq-item">
-                    <button
-                        class="w-full text-left p-4 bg-yellow-50 rounded-lg font-semibold text-yellow-700 hover:bg-yellow-100">
-                        Comment contacter la FAGE et ses fédérations ?
-                    </button>
-                    <div class="faq-body p-0 text-gray-700 rounded-lg bg-yellow-50">
-                        <p class="px-4">
-                            Contact : <a href="mailto:mesdroits@fage.org"
-                                class="text-blue-600 underline">mesdroits@fage.org</a> | Tél : <strong>06 22 03 05
-                                15</strong><br>
-                            Vous pouvez aussi utiliser notre carte interactive pour trouver nos contacts sur votre
-                            territoire. Ligne directe : <strong>06 32 64 96 54</strong>.
-                        </p>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Gouvernance -->
-        <section class="bg-white rounded-2xl shadow-lg p-8 hover:shadow-2xl transition-all duration-300 space-y-4">
-            <h2 class="text-3xl font-bold text-blue-600">La gouvernance et l’action de la FAGE</h2>
-            <p class="text-gray-700 leading-relaxed">
-                La FAGE met en place des instances pour défendre efficacement les droits des étudiant·e·s et jeunes.
-                Elle coordonne les actions locales et nationales pour sensibiliser et accompagner.
-            </p>
-            <p class="text-gray-700 leading-relaxed">
-                Les instances se réunissent régulièrement pour suivre l’évolution des droits et planifier des campagnes.
-                Chaque année, un bilan est présenté pour améliorer l’accès aux droits.
-            </p>
-        </section>
-
-    </main>
-
-    <!-- FOOTER -->
-    <footer class="text-white mt-10 bg-gradient-to-r from-blue-500 to-blue-400">
-        <div class="max-w-7xl mx-auto p-10 grid md:grid-cols-4 gap-8">
-            <div>
-                <h3 class="ft-title font-bold">La Fage</h3>
-                <ul class="space-y-2 text-sm">
-                    <li><a href="#" class="hover:text-blue-300">Qui sommes-nous ?</a></li>
-                    <li><a href="#" class="hover:text-blue-300">La gouvernance</a></li>
-                    <li><a href="#" class="hover:text-blue-300">L'équipe nationale</a></li>
-                    <li><a href="#" class="hover:text-blue-300">Nos membres</a></li>
-                </ul>
-            </div>
-            <div>
-                <h3 class="ft-title font-bold">Nos idées</h3>
-                <ul class="space-y-2 text-sm">
-                    <li><a href="#" class="hover:text-blue-300">Enseignement supérieur</a></li>
-                    <li><a href="#" class="hover:text-blue-300">Transition Écologique</a></li>
-                </ul>
-            </div>
-            <div>
-                <h3 class="ft-title font-bold">Innovation sociale</h3>
-                <ul class="space-y-2 text-sm">
-                    <li><a href="#" class="hover:text-blue-300">Prévention par les pairs</a></li>
-                    <li><a href="#" class="hover:text-blue-300">Santé et bien-être</a></li>
-                </ul>
-            </div>
-            <div>
-                <h3 class="ft-title font-bold">Contact</h3>
-                <ul class="space-y-2 text-sm">
-                    <li><a href="mailto:ethanmkp@gmail.com" class="hover:text-blue-300">FAGE – Fédération des
-                            Associations Générales Étudiantes</a></li>
-                    <li>79 rue Périer 92120 Montrouge</li>
-                    <li><a href="tel:+33140337070" class="hover:text-blue-300">01.40.33.70.70</a></li>
-                </ul>
+        <div class="faq-item">
+            <button class="faq-btn">Introduction globale sur les droits</button>
+            <div class="faq-content">
+                <p>La FAQ est née d’un constat : beaucoup de jeunes ne connaissent pas leurs droits. La FAGE propose des informations pour que chacun puisse y accéder.</p>
             </div>
         </div>
-    </footer>
 
-    <script>
-        // JS accordéon FAQ
-        const faqButtons = document.querySelectorAll('.faq-item button');
-        faqButtons.forEach(btn => {
-            btn.addEventListener('click', () => {
-                const body = btn.nextElementSibling;
-                body.classList.toggle('open');
-            });
-        });
-    </script>
+        <div class="faq-item">
+            <button class="faq-btn">L’action de la FAGE : accompagnement</button>
+            <div class="faq-content">
+                <p>La FAGE informe sur les dispositifs existants et accompagne les jeunes via le mail mesdroits@fage.org pour les aider dans leurs démarches.</p>
+            </div>
+        </div>
 
+        <div class="faq-item">
+            <button class="faq-btn">Comment contacter la FAGE et ses fédérations ?</button>
+            <div class="faq-content">
+                <p>Contact : mesdroits@fage.org | Tél : 06 22 03 05 15. Vous pouvez aussi utiliser notre carte interactive.</p>
+            </div>
+        </div>
+    </section>
+
+</main>
+
+<footer>
+    <div class="footer-grid">
+
+        <div class="footer-col">
+            <h3>La FAGE</h3>
+            <ul>
+                <li><a href="Fage.html">Qui sommes-nous ?</a></li>
+                <li><a href="Fage.html">L'équipe nationale</a></li>
+                <li><a href="Fage.html">Nos membres</a></li>
+            </ul>
+        </div>
+
+        <div class="footer-col">
+            <h3>Nos Droits</h3>
+            <ul>
+                <li><a href="Droit.html">Défense des droits</a></li>
+                <li><a href="Droit.html">FAQ</a></li>
+                <li><a href="Droit.html">Gouvernance</a></li>
+            </ul>
+        </div>
+
+        <div class="footer-col">
+            <h3>Formations</h3>
+            <ul>
+                <li><a href="formationFage.html">Catalogue complet</a></li>
+                <li><a href="guideElu.html">Guide de l'élu</a></li>
+                <li><a href="ScolaritéEtudiant2.html">Formation Civique</a></li> </ul>
+        </div>
+
+        <div class="footer-col">
+            <h3>Vie Étudiante</h3>
+            <ul>
+                <li><a href="scolariteEtudiant.html">Scolarité & Précarité</a></li> <li><a href="read.html">Coût de la rentrée</a></li> </ul>
+        </div>
+
+        <div class="footer-col">
+            <h3>Contact</h3>
+            <ul>
+                <li><a href="mailto:contact@fage.org">contact@fage.org</a></li>
+                <li>01.40.33.70.70</li>
+                <li>79 rue Périer, Montrouge</li>
+            </ul>
+        </div>
+
+        <div class="footer-col" style="display:flex; align-items:center;">
+            <a href="NewLetter.html" class="btn btn-white" style="color:var(--primary-blue)">Newsletter</a>
+        </div>
+
+    </div>
+</footer>
+
+<script src="script.js"></script>
 </body>
-
 </html>

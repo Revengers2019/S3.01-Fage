@@ -1,245 +1,138 @@
 <!DOCTYPE html>
 <html lang="fr">
-
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>FAGE | Fédération des Associations Générales Étudiantes</title>
-    <link rel="icon"
-        href="https://img.freepik.com/vecteurs-premium/lettre-f-bleue-blanche-est-fond-bleu_462839-1528.jpg"
-        type="image/jpeg">
-    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
-    <link rel="stylesheet" href="../App/style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Scolarité Étudiante</title>
+    <link rel="icon" href="https://img.freepik.com/vecteurs-premium/lettre-f-bleue-blanche-est-fond-bleu_462839-1528.jpg" type="image/jpeg">
+    <link rel="stylesheet" href="style.css">
 </head>
+<body>
 
-<body class="font-sans text-gray-900 bg-gray-50">
-
-    <!-- NAVBAR -->
-    <nav class="fixed w-full z-50 bg-gradient-to-r from-blue-500 to-blue-400 text-white shadow-lg">
-        <div class="max-w-7xl mx-auto flex items-center justify-between p-4 lg:py-2">
-            <a href="#" class="flex items-center">
-                <img src="https://ageparis.org/agepwebcontent/uploads/2013/01/fage-blanc-logo-min.png" alt="Logo FAGE"
-                    class="w-28 lg:w-20">
-            </a>
-
-            <!-- Bouton hamburger pour mobile -->
-            <div class="lg:hidden">
-                <button id="menu-btn" class="focus:outline-none">
-                    <!-- Trois barres -->
-                    <span class="block w-6 h-0.5 bg-white mb-1"></span>
-                    <span class="block w-6 h-0.5 bg-white mb-1"></span>
-                    <span class="block w-6 h-0.5 bg-white"></span>
-                </button>
-            </div>
-
-            <!-- Menu desktop -->
-            <ul class="hidden lg:flex space-x-8 text-white font-medium">
-                <li><a href="index.html" class="hover:text-gray-200">Accueil</a></li>
-                <li><a href="Fage.html" class="hover:text-gray-200">La FAGE</a></li>
-                <li><a href="Droit.html" class="hover:text-gray-200">Nos Droits</a></li>
-                <li><a href="formationFage.html" class="hover:text-gray-200">Formation Fage</a></li>
-                <li><a href="guideElu.html" class="hover:text-gray-200">Le Guide</a></li>
-                <li><a href="actualites.html" class="hover:text-gray-200">Les Actualités</a></li>
-            </ul>
-        </div>
-
-        <!-- Menu mobile -->
-        <ul id="mobile-menu"
-            class="lg:hidden hidden flex-col bg-gradient-to-r from-blue-500 to-blue-400 text-white font-medium px-4 pt-2 pb-4 space-y-2">
-            <li><a href="index.html" class="block hover:text-gray-200">Accueil</a></li>
-            <li><a href="Fage.html" class="block hover:text-gray-200">La FAGE</a></li>
-            <li><a href="Droit.html" class="block hover:text-gray-200">Nos Droits</a></li>
-            <li><a href="formationFage.html" class="block hover:text-gray-200">Formation Fage</a></li>
-            <li><a href="guideElu.html" class="block hover:text-gray-200">Le Guide</a></li>
-            <li><a href="actualites.html" class="block hover:text-gray-200">Les Actualités</a></li>
+<nav class="navbar">
+    <div class="nav-container">
+        <a href="index.html" class="nav-logo">
+            <img src="https://ageparis.org/agepwebcontent/uploads/2013/01/fage-blanc-logo-min.png" alt="Logo FAGE">
+        </a>
+        <button id="menu-btn" class="hamburger"><span></span><span></span><span></span></button>
+        <ul class="nav-links">
+            <li><a href="index.html">Accueil</a></li>
+            <li><a href="Fage.html">La FAGE</a></li>
+            <li><a href="Droit.html">Nos Droits</a></li>
+            <li><a href="formationFage.html">Formation</a></li>
+            <li><a href="guideElu.html">Le Guide</a></li>
+            <li><a href="scolariteEtudiant.html" class="active">Scolarité</a></li>
+            <li><a href="ScolaritéEtudiant2.html">Civique</a></li>
+            <li><a href="read.html">Coût rentrée</a></li>
         </ul>
-    </nav>
+    </div>
+    <ul id="mobile-menu" class="mobile-menu">
+        <li><a href="index.html">Accueil</a></li>
+        <li><a href="Fage.html">La FAGE</a></li>
+        <li><a href="Droit.html">Nos Droits</a></li>
+        <li><a href="formationFage.html">Formation</a></li>
+        <li><a href="guideElu.html">Le Guide</a></li>
+        <li><a href="scolariteEtudiant.html">Scolarité</a></li>
+        <li><a href="ScolaritéEtudiant2.html">Civique</a></li>
+        <li><a href="read.html">Coût rentrée</a></li>
+    </ul>
+</nav>
 
-    <!-- Titre -->
-    <h1 class="pt-28">Suivre la formation en Education Civique et Citoyenne avec la FAGE</h1>
-    <h2>
-        L’émancipation de la jeunesse par la formation est une des valeurs fondamentales de la FAGE.
-    </h2>
-    <p>
-        C’est pourquoi, en tant qu’Organisme Formateur reconnu par l’Agence du Service Civique, la FAGE est habilitée à
-        dispenser la Formation Civique et Citoyenne (FCC).Cette formation est obligatoire pour tout jeune engagé en
-        Service Civique.
-    </p>
+<main class="container">
+    <br><br>
 
-    <!-- Liens inter-page -->
-    <a href="#fCC">Qu'est-ce que la formation Civique et Citoyenne ?</a>
-    <a href="#quand">Quand puis-je la suivre ?</a>
-    <a href="#cmb">Combien ça coûte ?</a>
-    <a href="#signin" class="font-semibold">Comment m'inscrire ?</a>
-
-    <div>
-        <img src="https://www.fage.org/ressources/imageBank/cache/36/560x-9052-FCC_Nov_24-131.jpeg">
-        <div class="bg-gray-500">
-            Formation lors des FCC 2024
-        </div>
+    <div style="text-align: center; margin-bottom: 3rem;">
+        <h1 style="font-size: 2.5rem; font-weight: 800; margin-bottom: 1rem;">S'engager contre les précarités</h1>
+        <p style="font-size: 1.1rem; color: #4b5563;">La FAGE et son réseau s'engagent pour lutter contre la précarité sous toutes ses formes.</p>
     </div>
 
-    <!-- Formation Civique et Citoyenne -->
-    <div id="fCC">
-        <h1>Qu’est-ce que la Formation Civique et Citoyenne ?</h1>
-        <p>
-            La <b>Formation Civique et Citoyenne</b>, qui se tient sur <b>deux jours consécutifs</b>, apporte un
-            complément théorique à l’expérience humaine du Service Civique.
-            <br>
-            Les jeunes y sont amenés à rencontrer d’autres volontaires, à se familiariser avec leur statut et à débattre
-            sur des enjeux majeurs de société. Par ce biais, chacun.e peut repenser son engagement pour mieux lui donner
-            un sens.
-            <br>
-            A la FAGE, nous ne croyons pas au cours magistral lénifiant. Nos formateurices emploient des méthodes
-            <b>ludiques</b> et <b>participatives</b> pour impliquer activement les volontaires dans leur formation.
-        </p>
-
-        <div>
-            <img src="https://www.fage.org/ressources/imageBank/cache/36/560x-9050-FCC_Nov_24-013.jpeg">
-            <p class="bg-gray-500">
-                Atelier de formation de l'édition 2024
-            </p>
-        </div>
-    </div>
-
-    <!-- Quand la suivre -->
-    <div id="quand">
-        <h1>Quand puis-je la suivre ?</h1>
-        <p>
-            La FAGE forme ses volontaires lors de ses Formation Civique et Citoyennes de Novembre.
-            <br>
-            Lors de cet événement, le volet théorique de la FCC sera dispensé, assurant le nombre d'heures minimal afin
-            qu’il soit reconnu auprès de l’Agence du Service Civique
-            <br>
-            Les prochaines FCC se tiendront à <b>Paris</b>, du <b>28 au 30 Novembre 2025</b>. Organisées par la FAGE,
-            elles sont
-            l’occasion de découvrir le monde de l'engagement et du service à l'autre. Ateliers, débats et formations
-            sont au rendez-vous afin d'aborder au mieux toutes les thématiques autour de la citoyenneté et du rapports
-            aux autres.
-        </p>
-    </div>
-
-    <!-- Combien ça coute -->
-    <div id="cmb">
-        <h1>Combien ça coûte ?</h1>
-        <p>
-            Les FCC sont totalement gratuites pour les volontaires affiliés à la FAGE ou à l’une de ses fédérations.
-            Nous vous attendons donc nombreuses et nombreux pour ces formations !!
-        </p>
-        <div>
-            <img src="https://www.fage.org/ressources/imageBank/cache/36/560x-9051-FCC_Nov_24-74.jpeg">
-            <p class="bg-gray-500">
-                Formation lors des FCC 2024
-            </p>
-        </div>
-    </div>
-
-    <!-- Combien m'inscrire -->
-    <div id="signin">
-        <h1 class="font-semibold">Comment m'inscrire ?</h1>
-        <p>
-            Les places seront mises à dispositions sur la boutique de la FAGE dès le mercredi 29 Octobre 2025
-            <br>
-            Tout d’abord, il faudra vous créer un compte personnel en quelques clics que l’application FAGE. Depuis
-            votre compte, vous retrouverez les ateliers de formation choisis et pourrez télécharger une attestation de
-            présence, le tout en gérant vous-même vos données personnelles.
-            <br>
-            Il vous suffira ensuite de vous inscrire en remplissant le formulaire d'inscription ainsi que le formulaire
-            de choix des formations. (N'hésitez pas à consulter le catalogue de formation afin de découvrir les contenus
-            qui vous seront proposés !)
-            <br>
-            <u>Informations tarifs et paiements :</u>
-            <br>
-            - Tarif FAGE : 0 € (hébergement, restauration, formations, activités et transport inclus).
-            <br>
-            ATTENTION - Bien que la billetterie indique automatiquement un tarif à 1€, vous n'aurez rien à régler lors
-            de votre inscription. Sélectionnez virement bancaire à la fin de votre inscription, sans l'appliquer
-            réellement. Vous recevrez un mail de confirmation d'inscription dans les jours suivants votre inscription.
-        </p>
-    </div>
-
-    <!-- FOOTER / CONTACT -->
-
-    <section id="apropos" class="py-16 bg-white">
-        <div class="max-w-6xl mx-auto px-6 text-center">
-            <h2 class="text-4xl font-semibold mb-6">La FAGE : Première organisation étudiante de France</h2>
-            <p class="text-lg leading-relaxed max-w-3xl mx-auto mb-10">
-                La FAGE est la première organisation étudiante de France. Elle défend les droits des étudiant·e·s,
-                accompagne
-                les associations étudiantes
-                et agit au quotidien pour améliorer les conditions de vie et d'études. Engagée pour une jeunesse plus
-                autonome,
-                solidaire et actrice de son environnement, elle développe des actions sur le terrain à travers ses
-                fédérations
-                et réseaux locaux.
+    <section id="apropos" class="apropos-section" style="background: white; padding: 3rem; border-radius: 1.5rem; margin-bottom: 3rem; box-shadow: var(--shadow);">
+        <div class="apropos-content" style="max-width: 900px; margin: 0 auto; text-align: center;">
+            <h2 style="font-size: 2rem; font-weight: 700; margin-bottom: 1.5rem;">La FAGE : Première organisation étudiante</h2>
+            <p style="margin-bottom: 2rem; color: #4b5563;">
+                La FAGE est la première organisation étudiante de France. Elle défend les droits des étudiant·e·s, accompagne les associations et agit au quotidien.
             </p>
 
-            <div class="grid md:grid-cols-2 gap-8 text-left">
-                <div class="p-6 bg-gray-50 rounded-lg shadow">
-                    <h3 class="text-xl font-semibold mb-2">Innovation sociale & Solidarité</h3>
-                    <p>
-                        À travers les <strong>AGORAé</strong>, épiceries sociales et solidaires implantées dans les
-                        campus, la FAGE
-                        lutte contre la précarité étudiante
-                        et favorise la réussite pour toutes et tous. La santé mentale et le bien-être sont également au
-                        cœur des
-                        actions.
-                    </p>
+            <div class="grid-2" style="text-align: left;">
+                <div class="info-box box-blue">
+                    <h4>Innovation sociale & Solidarité</h4>
+                    <p>À travers les <strong>AGORAé</strong>, épiceries solidaires, la FAGE lutte contre la précarité et favorise la réussite.</p>
                 </div>
-                <div class="p-6 bg-gray-50 rounded-lg shadow">
-                    <h3 class="text-xl font-semibold mb-2">Représentation & Défense des droits</h3>
-                    <p>
-                        La FAGE porte la voix des étudiant·e·s auprès des institutions pour garantir l’accès aux études,
-                        l’égalité
-                        des chances
-                        et la construction d’un système démocratique plus inclusif.
-                    </p>
+                <div class="info-box box-blue">
+                    <h4>Représentation & Droits</h4>
+                    <p>La FAGE porte la voix des étudiant·e·s auprès des institutions pour garantir l’accès aux études.</p>
                 </div>
             </div>
         </div>
     </section>
 
-
-    <footer class="text-white mt-10 bg-gradient-to-r from-blue-500 to-blue-400">
-        <div class="max-w-7xl mx-auto p-10 grid md:grid-cols-4 gap-8">
-            <div>
-                <h3 class="ft-title font-bold">La Fage</h3>
-                <ul class="space-y-2 text-sm">
-                    <li><a href="Fage.html" class="hover:text-white">Qui sommes-nous ?</a></li>
-                    <li><a href="Fage.html" class="hover:text-white">La Féderations </a></li>
-                    <li><a href="Fage.html" class="hover:text-white">L'équipe nationale</a></li>
-                    <li><a href="Fage.html" class="hover:text-white">Nos membres</a></li>
-                </ul>
-            </div>
-            <div>
-                <h3 class="ft-title font-bold">Nos Droits</h3>
-                <ul class="space-y-2 text-sm">
-                    <li><a href="Droit.html" class="hover:text-white">La défense des droits</a></li>
-                    <li><a href="Droit.html" class="hover:text-white">Foire aux questions</a></li>
-                    <li><a href="Droit.html" class="hover:text-white">La gouvernance et l’action de la FAGE</a></li>
-
-                </ul>
-            </div>
-            <div>
-                <h3 class="ft-title font-bold">Vos Pages</h3>
-                <ul class="space-y-2 text-sm">
-                    <li><a href="#" class="hover:text-white">...</a></li>
-                    <li><a href="#" class="hover:text-white">...</a></li>
-                </ul>
-            </div>
-            <div>
-                <h3 class="ft-title font-bold">Contact</h3>
-                <ul class="space-y-2 text-sm">
-                    <li><a href="mailto:contact@fage.org" class="hover:text-white">contact@fage.org</a></li>
-                    <li>79 rue Périer 92120 Montrouge</li>
-                    <li><a href="tel:+33140337070" class="hover:text-white">01.40.33.70.70</a></li>
-                </ul>
-            </div>
+    <section class="grid-2 reveal">
+        <div class="card" style="background-color: #eff6ff; border: 1px solid #bfdbfe;">
+            <h2 style="font-size: 1.5rem; font-weight: 700; margin-bottom: 1rem;">Engagement & action</h2>
+            <p>La FAGE intervient à travers notamment les espaces AGORAé — épiceries solidaires gérées par des étudiant·e·s.</p>
+            <img src="https://www.jeunes-bfc.fr/wp-content/uploads/2022/09/agorae_1200-768x403.png" alt="Action étudiante" style="width: 100%; border-radius: 0.5rem;">
         </div>
-    </footer>
 
-    <script src="../App/script.js"></script>
+        <div class="card" style="background-color: #eff6ff; border: 1px solid #bfdbfe;">
+            <h2 style="font-size: 1.5rem; font-weight: 700; margin-bottom: 1rem;">Engagement & action</h2>
+            <p style="margin-bottom: 1rem;">Les étudiant·e·s peuvent s’engager concrètement via des actions de terrain et projets d’innovation sociale.</p>
+            <img src="https://i.ytimg.com/vi/G6Egva74tiI/maxresdefault.jpg" alt="Action étudiante" style="width: 100%; border-radius: 0.5rem;">
+        </div>
+    </section>
 
+</main>
+
+<footer>
+    <div class="footer-grid">
+
+        <div class="footer-col">
+            <h3>La FAGE</h3>
+            <ul>
+                <li><a href="Fage.html">Qui sommes-nous ?</a></li>
+                <li><a href="Fage.html">L'équipe nationale</a></li>
+                <li><a href="Fage.html">Nos membres</a></li>
+            </ul>
+        </div>
+
+        <div class="footer-col">
+            <h3>Nos Droits</h3>
+            <ul>
+                <li><a href="Droit.html">Défense des droits</a></li>
+                <li><a href="Droit.html">FAQ</a></li>
+                <li><a href="Droit.html">Gouvernance</a></li>
+            </ul>
+        </div>
+
+        <div class="footer-col">
+            <h3>Formations</h3>
+            <ul>
+                <li><a href="formationFage.html">Catalogue complet</a></li>
+                <li><a href="guideElu.html">Guide de l'élu</a></li>
+                <li><a href="ScolaritéEtudiant2.html">Formation Civique</a></li> </ul>
+        </div>
+
+        <div class="footer-col">
+            <h3>Vie Étudiante</h3>
+            <ul>
+                <li><a href="scolariteEtudiant.html">Scolarité & Précarité</a></li> <li><a href="read.html">Coût de la rentrée</a></li> </ul>
+        </div>
+
+        <div class="footer-col">
+            <h3>Contact</h3>
+            <ul>
+                <li><a href="mailto:contact@fage.org">contact@fage.org</a></li>
+                <li>01.40.33.70.70</li>
+                <li>79 rue Périer, Montrouge</li>
+            </ul>
+        </div>
+
+        <div class="footer-col" style="display:flex; align-items:center;">
+            <a href="NewLetter.html" class="btn btn-white" style="color:var(--primary-blue)">Newsletter</a>
+        </div>
+
+    </div>
+</footer>
+
+<script src="script.js"></script>
 </body>
-
 </html>

@@ -1,60 +1,150 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-    <meta charset="utf-8" />
+    <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <title>La formation à la FAGE</title>
-    <meta name="description" content="Retrouvez les principales actions menée par la FAGE en terme de formation et d'éducation populaire." />
-
-    <link rel="stylesheet" href="assets/css/style.css">
-
-    <link rel="preconnect" href="https://static.fage.oonops.eu">
-    <link rel="preload" href="https://static.fage.oonops.eu/64ecd1ec/css/fonts/icomoon.woff" as="font" type="font/woff" crossorigin>
-    <link rel="preload" href="https://static.fage.oonops.eu/64ecd1ec/css/fonts/icomoon2/icomoon.ttf?plwabj" as="font" type="font/ttf" crossorigin>
+    <title>Formation FAGE | Catalogue</title>
+    <link rel="icon" href="https://img.freepik.com/vecteurs-premium/lettre-f-bleue-blanche-est-fond-bleu_462839-1528.jpg" type="image/jpeg">
+    <link rel="stylesheet" href="style.css">
 </head>
+<body>
 
-<body itemscope itemtype="http://schema.org/WebPage">
-<div id="site-core">
+<nav class="navbar">
+    <div class="nav-container">
+        <a href="index.html" class="nav-logo">
+            <img src="https://ageparis.org/agepwebcontent/uploads/2013/01/fage-blanc-logo-min.png" alt="Logo FAGE">
+        </a>
+        <button id="menu-btn" class="hamburger"><span></span><span></span><span></span></button>
+        <ul class="nav-links">
+            <li><a href="index.html">Accueil</a></li>
+            <li><a href="Fage.html">La FAGE</a></li>
+            <li><a href="Droit.html">Nos Droits</a></li>
+            <li><a href="formationFage.html" class="active">Formation</a></li>
+            <li><a href="guideElu.html">Le Guide</a></li>
+            <li><a href="scolariteEtudiant.html">Scolarité</a></li>
+            <li><a href="ScolaritéEtudiant2.html">Civique</a></li>
+            <li><a href="read.html">Coût rentrée</a></li>
+        </ul>
+    </div>
+    <ul id="mobile-menu" class="mobile-menu">
+        <li><a href="index.html">Accueil</a></li>
+        <li><a href="Fage.html">La FAGE</a></li>
+        <li><a href="Droit.html">Nos Droits</a></li>
+        <li><a href="formationFage.html">Formation</a></li>
+        <li><a href="guideElu.html">Le Guide</a></li>
+        <li><a href="scolariteEtudiant.html">Scolarité</a></li>
+        <li><a href="ScolaritéEtudiant2.html">Civique</a></li>
+        <li><a href="read.html">Coût rentrée</a></li>
+    </ul>
+</nav>
 
-    <header id="header" itemscope itemtype="http://schema.org/WPHeader">
-        <div class="content">
-            <nav id="transverse-nav" aria-label="Navigation utilitaire" role="navigation">
-                <button class="mobile-nav-toggle" aria-expanded="false" aria-controls="main-menu" aria-label="Ouvrir le menu principal">
-                    <span aria-hidden="true">Menu</span>
-                </button>
-            </nav>
+<main class="container">
+    <br><br>
+
+    <section class="card reveal" style="display: flex; flex-direction: column; md:flex-row; gap: 2rem; margin-bottom: 3rem;">
+        <div style="flex: 2;">
+            <h1 style="color: var(--primary-blue); font-size: 2.5rem; font-weight: 800; margin-bottom: 1rem;">Catalogue de formations FAGE</h1>
+            <p style="margin-bottom: 1.5rem;">Découvrez toutes les formations proposées par la FAGE pour les bénévoles et élus étudiants. Chaque formation permet d’acquérir des compétences pratiques.</p>
+            <a href="https://www.fage.org/ressources/documents/source/1/8396-JNIS-2023-Catalogue-de-formations.pdf" target="_blank" class="btn btn-blue">
+                Voir le catalogue PDF
+            </a>
         </div>
-    </header>
+        <div style="flex: 1; display: flex; justify-content: center; align-items: center;">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQWCWU-9uDO2sWxQxIPt_r8HPO37xQRuOYF-g&s" alt="Formations" style="max-height: 200px; border-radius: 1rem;">
+        </div>
+    </section>
 
-    <nav id="top-nav" aria-label="Navigation de section" role="navigation">
-    </nav>
+    <section class="grid-2 reveal">
 
-    <main class="content main-content-wrapper" itemprop="mainContentOfPage">
-        <article class="core">
-            <div class="main wide" itemscope itemtype="http://schema.org/Article">
-            </div>
-        </article>
-    </main>
+        <div class="card">
+            <h2 style="color: var(--primary-blue); font-size: 1.5rem; font-weight: 700; margin-bottom: 1rem;">Affaires sociales</h2>
+            <ul style="list-style: disc; padding-left: 1.5rem;">
+                <li>Accueil des étudiants internationaux</li>
+                <li>Accompagnement handicap</li>
+                <li>Accueillir un service civique</li>
+            </ul>
+        </div>
 
-    <footer id="footer" itemscope itemtype="http://schema.org/WPFooter">
-    </footer>
-</div>
+        <div class="card">
+            <h2 style="color: var(--primary-blue); font-size: 1.5rem; font-weight: 700; margin-bottom: 1rem;">Innovation sociale</h2>
+            <ul style="list-style: disc; padding-left: 1.5rem;">
+                <li>Éducation populaire</li>
+                <li>Développement durable</li>
+                <li>Formations bénévoles</li>
+            </ul>
+        </div>
 
-<script src="../App/script.js" defer></script>
+        <div class="card">
+            <h2 style="color: var(--primary-blue); font-size: 1.5rem; font-weight: 700; margin-bottom: 1rem;">Affaires académiques</h2>
+            <ul style="list-style: disc; padding-left: 1.5rem;">
+                <li>Actualité de l’enseignement supérieur</li>
+                <li>Agir en conseil de résidence</li>
+            </ul>
+        </div>
 
-<script type="text/javascript" src="https://static.fage.oonops.eu/64ecd1ec/js/jquery.visible.min.js" defer></script>
-<script type="text/javascript" src="https://static.fage.oonops.eu/64ecd1ec/js/jquery-animateNumber-min.js" defer></script>
-<script src="https://static.fage.oonops.eu/64ecd1ec/js/fage.min.js" defer></script>
+        <div class="card">
+            <h2 style="color: var(--primary-blue); font-size: 1.5rem; font-weight: 700; margin-bottom: 1rem;">Gestion & Développement</h2>
+            <ul style="list-style: disc; padding-left: 1.5rem;">
+                <li>Assurance qualité projet</li>
+                <li>Santé étudiante</li>
+            </ul>
+        </div>
 
-<div id="fb-root"></div>
-<script>(function(d, s, id) {
-    var js, fjs = d.getElementsByTagName(s)[0];
-    if (d.getElementById(id)) return;
-    js = d.createElement(s); js.id = id;
-    js.src = "//connect.facebook.net/fr_FR/sdk.js#xfbml=1&version=v2.5&appId=849618175073167";
-    fjs.parentNode.insertBefore(js, fjs);
-}(document, 'script', 'facebook-jssdk'));</script>
+    </section>
 
+</main>
+
+<footer>
+    <div class="footer-grid">
+
+        <div class="footer-col">
+            <h3>La FAGE</h3>
+            <ul>
+                <li><a href="Fage.html">Qui sommes-nous ?</a></li>
+                <li><a href="Fage.html">L'équipe nationale</a></li>
+                <li><a href="Fage.html">Nos membres</a></li>
+            </ul>
+        </div>
+
+        <div class="footer-col">
+            <h3>Nos Droits</h3>
+            <ul>
+                <li><a href="Droit.html">Défense des droits</a></li>
+                <li><a href="Droit.html">FAQ</a></li>
+                <li><a href="Droit.html">Gouvernance</a></li>
+            </ul>
+        </div>
+
+        <div class="footer-col">
+            <h3>Formations</h3>
+            <ul>
+                <li><a href="formationFage.html">Catalogue complet</a></li>
+                <li><a href="guideElu.html">Guide de l'élu</a></li>
+                <li><a href="ScolaritéEtudiant2.html">Formation Civique</a></li> </ul>
+        </div>
+
+        <div class="footer-col">
+            <h3>Vie Étudiante</h3>
+            <ul>
+                <li><a href="scolariteEtudiant.html">Scolarité & Précarité</a></li> <li><a href="read.html">Coût de la rentrée</a></li> </ul>
+        </div>
+
+        <div class="footer-col">
+            <h3>Contact</h3>
+            <ul>
+                <li><a href="mailto:contact@fage.org">contact@fage.org</a></li>
+                <li>01.40.33.70.70</li>
+                <li>79 rue Périer, Montrouge</li>
+            </ul>
+        </div>
+
+        <div class="footer-col" style="display:flex; align-items:center;">
+            <a href="NewLetter.html" class="btn btn-white" style="color:var(--primary-blue)">Newsletter</a>
+        </div>
+
+    </div>
+</footer>
+
+<script src="script.js"></script>
 </body>
 </html>

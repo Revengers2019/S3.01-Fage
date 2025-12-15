@@ -2,9 +2,10 @@
 <html lang="fr">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Le Guide de l'Élu - FAGE</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <title>NewLetter</title>
     <link rel="icon" href="https://img.freepik.com/vecteurs-premium/lettre-f-bleue-blanche-est-fond-bleu_462839-1528.jpg" type="image/jpeg">
+
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -20,7 +21,7 @@
             <li><a href="Fage.html">La FAGE</a></li>
             <li><a href="Droit.html">Nos Droits</a></li>
             <li><a href="formationFage.html">Formation</a></li>
-            <li><a href="guideElu.html" class="active">Le Guide</a></li>
+            <li><a href="guideElu.html">Le Guide</a></li>
             <li><a href="scolariteEtudiant.html">Scolarité</a></li>
             <li><a href="ScolaritéEtudiant2.html">Civique</a></li>
             <li><a href="read.html">Coût rentrée</a></li>
@@ -38,39 +39,52 @@
     </ul>
 </nav>
 
-<main class="container">
-    <br><br>
+<main class="container" style="max-width: 900px;">
+<br><br>
 
-    <section class="card reveal" style="display: flex; flex-direction: column; md:flex-row; gap: 2rem; align-items: center; margin-bottom: 3rem;">
-        <div style="flex: 2;">
-            <h2 style="color: var(--primary-blue); font-size: 2.5rem; font-weight: 800; margin-bottom: 1rem;">Le Guide de l'élu - 5e édition</h2>
-            <p style="margin-bottom: 1rem;">En vous confiant un mandat d'élu, les étudiants comptent sur vous pour les représenter et les défendre chaque jour.</p>
-            <p>Ce guide apporte les bases, ressources et méthodes pour réussir votre mandat.</p>
+
+    <a href="https://www.fage.org/archives-newsletters/" class="card reveal" style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 2rem; border-left: 6px solid var(--primary-blue);">
+        <div>
+            <h2 style="font-size: 1.25rem; font-weight: 700; margin-bottom: 0.5rem;">À découvrir</h2>
+            <p style="color: #6b7280;">Retrouvez les précédentes éditions de la newsletter de la FAGE</p>
         </div>
-        <div style="flex: 1; display: flex; justify-content: center;">
-            <img src="https://www.fage.org/ressources/imageBank/10/210x-750-GDE-site-fage.png" alt="Couverture Guide" style="max-width: 200px;">
-        </div>
-    </section>
+        <img src="https://fiches-pratiques.chefdentreprise.com/wp-content/uploads/2025/09/Des-astuces-augmenter-abonnements-newsletter-F.jpg" alt="Newsletter" style="width: 80px; height: 80px; object-fit: cover; border-radius: 0.5rem; margin-left: 1rem;">
+    </a>
 
-    <section class="reveal" style="display: flex; flex-direction: column; gap: 1.5rem;">
+    <div class="card reveal">
+        <h2 style="font-size: 1.5rem; font-weight: 700; margin-bottom: 0.5rem;">Inscription à la newsletter</h2>
+        <p style="margin-bottom: 0.5rem;">Notre newsletter vous informe sur l'actualité de la FAGE et de son réseau.</p>
+        <p style="margin-bottom: 1.5rem; font-weight: 600;">N'attendez plus et abonnez-vous dès à présent !</p>
 
-        <div class="card">
-            <h2 style="font-size: 1.5rem; font-weight: 700; margin-bottom: 0.5rem;">Présentation du Guide</h2>
-            <p>Un outil essentiel pour représenter efficacement vos pairs.</p>
-        </div>
+        <form id="form-inscription">
+            <p style="color: #ef4444; font-size: 0.9rem; margin-bottom: 1rem;">* Champs obligatoires.</p>
 
-        <div class="info-box box-blue">
-            <h2 style="font-size: 1.5rem; font-weight: 700; margin-bottom: 0.5rem;">Une 5e édition enrichie</h2>
-            <p>Plus complète, plus claire, incluant l’ensemble des niveaux de représentation étudiante, du campus jusqu'aux institutions nationales.</p>
-        </div>
+            <div class="grid-2">
+                <div style="margin-bottom: 1rem;">
+                    <label style="display: block; font-weight: 600; margin-bottom: 0.5rem;">Prénom <span style="color:red">*</span></label>
+                    <input type="text" id="fname" name="fname" required style="width: 100%; padding: 0.8rem; border: 1px solid #d1d5db; border-radius: 0.5rem;">
+                </div>
+                <div style="margin-bottom: 1rem;">
+                    <label style="display: block; font-weight: 600; margin-bottom: 0.5rem;">Nom <span style="color:red">*</span></label>
+                    <input type="text" id="lname" name="lname" required style="width: 100%; padding: 0.8rem; border: 1px solid #d1d5db; border-radius: 0.5rem;">
+                </div>
+            </div>
 
-        <div class="card">
-            <h2 style="font-size: 1.5rem; font-weight: 700; margin-bottom: 0.5rem;">Obtenir le Guide</h2>
-            <p>Disponible gratuitement pour les élus étudiants.</p>
-            <p>Demande par mail : <a href="mailto:formation@fage.org" style="color: var(--primary-blue); font-weight: bold;">formation@fage.org</a></p>
-        </div>
+            <div style="margin-bottom: 1rem;">
+                <label style="display: block; font-weight: 600; margin-bottom: 0.5rem;">Email <span style="color:red">*</span></label>
+                <input type="email" id="email" name="email" required style="width: 100%; padding: 0.8rem; border: 1px solid #d1d5db; border-radius: 0.5rem;">
+            </div>
 
-    </section>
+            <div style="margin-bottom: 1.5rem;">
+                <label style="display: block; font-weight: 600; margin-bottom: 0.5rem;">Organisation</label>
+                <input type="text" id="organisation" name="organisation" style="width: 100%; padding: 0.8rem; border: 1px solid #d1d5db; border-radius: 0.5rem;">
+            </div>
+
+            <div>
+                <button type="submit" class="btn btn-blue" style="width: 100%;">Envoyer</button>
+            </div>
+        </form>
+    </div>
 
 </main>
 
@@ -124,6 +138,8 @@
 
     </div>
 </footer>
+
 <script src="script.js"></script>
+
 </body>
 </html>
