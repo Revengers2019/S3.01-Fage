@@ -1,6 +1,6 @@
 <nav class="navbar">
     <div class="nav-container">
-       <a href="index.html" class="nav-logo">
+       <a href="index.php" class="nav-logo">
                  <img src="https://ageparis.org/agepwebcontent/uploads/2013/01/fage-blanc-logo-min.png" alt="Logo FAGE">
              </a>
 
@@ -30,4 +30,5 @@
         <li><a href="scolariteEtudiant.php">Scolarité</a></li>
         <li><a href="Civique.php">Civique</a></li>
     </ul>
+
 </nav>
