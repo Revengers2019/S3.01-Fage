@@ -30,10 +30,10 @@
             La FAGE constate que de nombreux jeunes ne connaissent pas leurs droits. Elle propose des ressources claires et un accompagnement.
         </p>
         <p style="margin-bottom: 1rem;">
-            Ligne d'écoute : <a href="mailto:formation@fage.org" style="color: var(--primary-blue); font-weight: bold;">06 32 64 96 54</a></p>
+            Ligne d'écoute : <a href="mailto:formation@fage.org" style="color: var(--primary-blue); font-weight: bold;">06 32 64 96 54</a>
         </p>
         <p>
-            Contact par mail : <a href="mailto:formation@fage.org" style="color: var(--primary-blue); font-weight: bold;">formation@fage.org</a></p>
+            Contact par mail : <a href="mailto:formation@fage.org" style="color: var(--primary-blue); font-weight: bold;">formation@fage.org</a>
         </p>
     </section>
 

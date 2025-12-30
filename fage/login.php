@@ -42,13 +42,13 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
         <form method="POST">
             <div style="margin-bottom:1rem;">
-                <label style="font-weight:bold;">Email</label>
-                <input type="email" name="email" required style="width:100%; padding:0.8rem; border:1px solid #ccc; border-radius:5px; margin-top:5px;">
+                <label for="email" style="font-weight:bold;">Email</label>
+                <input type="email" id="email" name="email" required style="width:100%; padding:0.8rem; border:1px solid #ccc; border-radius:5px; margin-top:5px;">
             </div>
 
             <div style="margin-bottom:1.5rem;">
-                <label style="font-weight:bold;">Mot de passe</label>
-                <input type="password" name="password" required style="width:100%; padding:0.8rem; border:1px solid #ccc; border-radius:5px; margin-top:5px;">
+                <label for="password" style="font-weight:bold;">Mot de passe</label>
+                <input type="password" id="password" name="password" required style="width:100%; padding:0.8rem; border:1px solid #ccc; border-radius:5px; margin-top:5px;">
             </div>
 
             <button type="submit" class="btn btn-blue" style="width:100%;">Se connecter</button>

@@ -30,9 +30,9 @@ if (isset($_GET['id'])) {
 
     <nav class="navbar">
         <div class="nav-container">
-            <a href="index.html" class="nav-logo">FAGE</a>
+            <a href="index.php" class="nav-logo">FAGE</a>
             <ul class="nav-links">
-                <li><a href="index.html">Accueil</a></li>
+                <li><a href="index.php">Accueil</a></li>
                 <li><a href="actualites.php" class="active">Actualités</a></li>
                 </ul>
         </div>

@@ -152,12 +152,12 @@ try {
             <form method="POST" action="admin_actus.php">
                 <div class="grid-2" style="gap: 20px;">
                     <div class="form-group">
-                        <label>Titre de l'article</label>
-                        <input type="text" name="titre" class="form-control" required placeholder="Ex: Soirée d'inté...">
+                        <label for="titre">Titre de l'article</label>
+                        <input type="text" id="titre" name="titre" class="form-control" required placeholder="Ex: Soirée d'inté...">
                     </div>
                     <div class="form-group">
-                        <label>URL de l'image (Optionnel)</label>
-                        <input type="text" name="image_url" class="form-control" placeholder="https://...">
+                        <label for="image_url">URL de l'image (Optionnel)</label>
+                        <input type="text" id="image_url" name="image_url" class="form-control" placeholder="https://...">
                     </div>
                 </div>
 

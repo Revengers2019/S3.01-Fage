@@ -13,6 +13,6 @@ try {
     // Si la connexion échoue, on arrête tout et on affiche pourquoi
     die("Erreur de connexion : " . $e->getMessage());
 }
-?>
+
 
 

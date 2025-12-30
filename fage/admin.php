@@ -49,7 +49,7 @@ if (!isset($_SESSION['user_id'])) {
         <div class="card">
             <h3>👥 Bénévoles</h3>
             <p style="margin-bottom:1.5rem; color:#6b7280;">Gérer les équipes et les recrutements.</p>
-            <a href="admin_benevoles.php" class="btn btn-blue" class="btn">Gérer les bénévoles</a>
+            <a href="admin_benevoles.php" class="btn btn-blue">Gérer les bénévoles</a>
         </div>
         <div class="card">
             <h3>🚩 Missions</h3>

@@ -47,7 +47,7 @@
     </div>
 
     <div style="text-align: center; margin-top: 4rem;">
-        <a href="NewLetter.php" class="btn btn-blue">
+        <a href="newsletter.php" class="btn btn-blue">
             Je m’inscris à la Newsletter →
         </a>
     </div>
