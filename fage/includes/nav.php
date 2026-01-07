@@ -7,8 +7,8 @@
         <button id="menu-btn" class="hamburger"><span></span><span></span><span></span></button>
 
         <ul class="nav-links">
-            <li><a href="index.php">Accueil</a></li>
-            <li><a href="Fage.php">La FAGE</a></li>
+            <li><a href="?/=/">Accueil</a></li>
+            <li><a href="?/=/Fage">La FAGE</a></li>
             <li><a href="actualites.php">Actualités</a></li>
             <li><a href="missions.php">Missions</a></li>
             <li><a href="Droit.php">Nos Droits</a></li>
@@ -21,8 +21,8 @@
     </div>
 
     <ul id="mobile-menu" class="mobile-menu">
-        <li><a href="index.php">Accueil</a></li>
-        <li><a href="Fage.php">La FAGE</a></li>
+        <li><a href="?/=/">Accueil</a></li>
+        <li><a href="?/=/Fage">La FAGE</a></li>
         <li><a href="actualites.php">Actualités</a></li>
         <li><a href="missions.php">Missions</a></li>
         <li><a href="Droit.php">Nos Droits</a></li>
