@@ -14,5 +14,4 @@ try {
     die("Erreur de connexion : " . $e->getMessage());
 }
 
-
-
+?>

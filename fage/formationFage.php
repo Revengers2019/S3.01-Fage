@@ -1,12 +1,12 @@
 <!DOCTYPE html>
 <html lang="fr">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Formation FAGE | Catalogue</title>
-    <link rel="icon" href="https://img.freepik.com/vecteurs-premium/lettre-f-bleue-blanche-est-fond-bleu_462839-1528.jpg" type="image/jpeg">
-    <link rel="stylesheet" href="assets/css/style.css">
-</head>
+
+<?php
+$otherLinks = '<link rel="icon" href="https://img.freepik.com/vecteurs-premium/lettre-f-bleue-blanche-est-fond-bleu_462839-1528.jpg" type="image/jpeg">';
+$title = "Formation FAGE | Catalogue";
+require "includes/head.php";
+?>
+
 <body>
 <?php include 'includes/nav.php'; ?>
 

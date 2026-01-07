@@ -33,48 +33,22 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && !empty($_POST['email'])) {
 
 <!DOCTYPE html>
 <html lang="fr">
-<head>
-    <meta charset="UTF-8">
-    <title>Inscription Newsletter | FAGE</title>
-<link rel="stylesheet" href="assets/css/style.css">
-    <style>
-        .newsletter-card {
-            background: white; padding: 40px; border-radius: 15px;
-            box-shadow: 0 10px 25px rgba(0,0,0,0.05); max-width: 700px; margin: 0 auto;
-        }
-        .form-row { display: flex; gap: 20px; margin-bottom: 20px; }
-        .form-col { flex: 1; }
-        label { display: block; font-weight: bold; margin-bottom: 8px; color: #333; }
-        .required { color: #dc2626; }
-        input[type="text"], input[type="email"] {
-            width: 100%; padding: 12px; border: 1px solid #d1d5db; border-radius: 8px; font-size: 1rem;
-        }
-        .btn-submit {
-            background-color: #5a73e8; color: white; width: 100%; padding: 15px; border: none;
-            border-radius: 30px; font-weight: bold; font-size: 1.1rem; cursor: pointer; margin-top: 20px;
-        }
-        .btn-submit:hover { opacity: 0.9; }
 
-        /* Style spécifique pour le message de succès */
-        .success-box {
-            text-align: center; padding: 50px 20px;
-        }
-        .success-icon { font-size: 4rem; margin-bottom: 20px; display: block; }
-        .btn-home {
-            display: inline-block; background: #10b981; color: white; padding: 12px 30px;
-            border-radius: 30px; text-decoration: none; font-weight: bold; margin-top: 20px;
-        }
-    </style>
-</head>
+<?php
+$otherLinks = '<link rel="icon" href="https://img.freepik.com/vecteurs-premium/lettre-f-bleue-blanche-est-fond-bleu_462839-1528.jpg" type="image/jpeg">';
+$title = "Inscription Newsletter | FAGE";
+require "includes/head.php";
+?>
+
 <body style="background-color: #f3f4f6;">
-<?php include 'includes/nav.php'; ?>
+    <?php include 'includes/nav.php'; ?>
 
 
     <main class="container" style="padding-top: 100px; padding-bottom: 60px;">
 
         <div class="newsletter-card">
 
-            <?php if($message_succes): ?>
+            <?php if ($message_succes): ?>
 
                 <div class="success-box">
                     <span class="success-icon">✅</span>
@@ -93,8 +67,9 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && !empty($_POST['email'])) {
                     Remplissez le formulaire ci-dessous pour rejoindre notre réseau.
                 </p>
 
-                <?php if($erreur): ?>
-                    <div style="background:#fee2e2; color:#991b1b; padding:10px; border-radius:5px; margin-bottom:20px; text-align:center; font-weight:bold;">
+                <?php if ($erreur): ?>
+                    <div
+                        style="background:#fee2e2; color:#991b1b; padding:10px; border-radius:5px; margin-bottom:20px; text-align:center; font-weight:bold;">
                         ⚠️ <?php echo $erreur; ?>
                     </div>
                 <?php endif; ?>
@@ -134,6 +109,88 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && !empty($_POST['email'])) {
 
     </main>
 
-<?php include 'includes/footer.php'; ?>
+    <?php include 'includes/footer.php'; ?>
+
+    <style>
+        .newsletter-card {
+            background: white;
+            padding: 40px;
+            border-radius: 15px;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05);
+            max-width: 700px;
+            margin: 0 auto;
+        }
+
+        .form-row {
+            display: flex;
+            gap: 20px;
+            margin-bottom: 20px;
+        }
+
+        .form-col {
+            flex: 1;
+        }
+
+        label {
+            display: block;
+            font-weight: bold;
+            margin-bottom: 8px;
+            color: #333;
+        }
+
+        .required {
+            color: #dc2626;
+        }
+
+        input[type="text"],
+        input[type="email"] {
+            width: 100%;
+            padding: 12px;
+            border: 1px solid #d1d5db;
+            border-radius: 8px;
+            font-size: 1rem;
+        }
+
+        .btn-submit {
+            background-color: #5a73e8;
+            color: white;
+            width: 100%;
+            padding: 15px;
+            border: none;
+            border-radius: 30px;
+            font-weight: bold;
+            font-size: 1.1rem;
+            cursor: pointer;
+            margin-top: 20px;
+        }
+
+        .btn-submit:hover {
+            opacity: 0.9;
+        }
+
+        /* Style spécifique pour le message de succès */
+        .success-box {
+            text-align: center;
+            padding: 50px 20px;
+        }
+
+        .success-icon {
+            font-size: 4rem;
+            margin-bottom: 20px;
+            display: block;
+        }
+
+        .btn-home {
+            display: inline-block;
+            background: #10b981;
+            color: white;
+            padding: 12px 30px;
+            border-radius: 30px;
+            text-decoration: none;
+            font-weight: bold;
+            margin-top: 20px;
+        }
+    </style>
 </body>
+
 </html>

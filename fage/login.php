@@ -28,27 +28,33 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
 <!DOCTYPE html>
 <html lang="fr">
-<head>
-    <meta charset="UTF-8">
-    <title>Connexion Admin FAGE</title>
-<link rel="stylesheet" href="assets/css/style.css">
-</head>
+
+<?php
+$otherLinks = '<link rel="icon" href="https://img.freepik.com/vecteurs-premium/lettre-f-bleue-blanche-est-fond-bleu_462839-1528.jpg" type="image/jpeg">';
+$title = "Connexion Admin FAGE";
+require "includes/head.php";
+?>
+
 <body style="display:flex; justify-content:center; align-items:center; height:100vh; background:#f3f4f6;">
 
     <div class="card" style="width: 400px; padding: 2rem;">
         <h2 style="text-align:center; color:#3b82f6; margin-bottom:1.5rem;">Espace Admin</h2>
 
-        <?php if(isset($error)) { echo "<p style='color:red; text-align:center; margin-bottom:1rem;'>$error</p>"; } ?>
+        <?php if (isset($error)) {
+            echo "<p style='color:red; text-align:center; margin-bottom:1rem;'>$error</p>";
+        } ?>
 
         <form method="POST">
             <div style="margin-bottom:1rem;">
                 <label for="email" style="font-weight:bold;">Email</label>
-                <input type="email" id="email" name="email" required style="width:100%; padding:0.8rem; border:1px solid #ccc; border-radius:5px; margin-top:5px;">
+                <input type="email" id="email" name="email" required
+                    style="width:100%; padding:0.8rem; border:1px solid #ccc; border-radius:5px; margin-top:5px;">
             </div>
 
             <div style="margin-bottom:1.5rem;">
                 <label for="password" style="font-weight:bold;">Mot de passe</label>
-                <input type="password" id="password" name="password" required style="width:100%; padding:0.8rem; border:1px solid #ccc; border-radius:5px; margin-top:5px;">
+                <input type="password" id="password" name="password" required
+                    style="width:100%; padding:0.8rem; border:1px solid #ccc; border-radius:5px; margin-top:5px;">
             </div>
 
             <button type="submit" class="btn btn-blue" style="width:100%;">Se connecter</button>
@@ -60,4 +66,5 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     </div>
 
 </body>
+
 </html>

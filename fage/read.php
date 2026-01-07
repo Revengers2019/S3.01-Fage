@@ -22,10 +22,12 @@ if (isset($_GET['id'])) {
 
 <!DOCTYPE html>
 <html lang="fr">
-<head>
-    <meta charset="UTF-8">
-    <title><?php echo htmlspecialchars($article['titre']); ?> | FAGE</title>
-<link rel="stylesheet" href="assets/css/style.css"></head>
+
+<?php
+$title = htmlspecialchars($article['titre']) + " | FAGE";
+require "includes/head.php";
+?>
+
 <body>
 
     <nav class="navbar">
@@ -34,13 +36,14 @@ if (isset($_GET['id'])) {
             <ul class="nav-links">
                 <li><a href="index.php">Accueil</a></li>
                 <li><a href="actualites.php" class="active">Actualités</a></li>
-                </ul>
+            </ul>
         </div>
     </nav>
 
     <main class="container" style="padding-top:100px; max-width: 800px; margin: 0 auto;">
 
-        <a href="actualites.php" style="text-decoration: none; color: gray; margin-bottom: 20px; display: inline-block;">
+        <a href="actualites.php"
+            style="text-decoration: none; color: gray; margin-bottom: 20px; display: inline-block;">
             &larr; Retour aux actualités
         </a>
 
@@ -52,9 +55,9 @@ if (isset($_GET['id'])) {
             Publié le <?php echo date("d/m/Y", strtotime($article['date_publication'])); ?>
         </p>
 
-        <?php if(!empty($article['image_url'])): ?>
+        <?php if (!empty($article['image_url'])): ?>
             <img src="<?php echo htmlspecialchars($article['image_url']); ?>"
-                 style="width: 100%; max-height: 400px; object-fit: cover; border-radius: 10px; margin-bottom: 30px;">
+                style="width: 100%; max-height: 400px; object-fit: cover; border-radius: 10px; margin-bottom: 30px;">
         <?php endif; ?>
 
         <div class="article-content" style="font-size: 1.1rem; line-height: 1.6; color: #333;">
@@ -64,4 +67,5 @@ if (isset($_GET['id'])) {
     </main>
 
 </body>
+
 </html>

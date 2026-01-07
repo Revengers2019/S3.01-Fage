@@ -64,65 +64,12 @@ try {
 
 <!DOCTYPE html>
 <html lang="fr">
-<head>
-    <meta charset="UTF-8">
-    <title>Gestion Missions - Admin</title>
-<link rel="stylesheet" href="assets/css/style.css">
-    <style>
-        /* MÊME CSS QUE LES AUTRES PAGES ADMIN */
-        .admin-section { max-width: 900px; margin: 0 auto; }
 
-        /* Alertes */
-        .alert { padding: 15px; border-radius: 8px; margin-bottom: 20px; font-weight: bold; text-align: center; box-shadow: 0 2px 4px rgba(0,0,0,0.1); }
-        .success { background: #d1fae5; color: #065f46; border: 1px solid #34d399; }
-        .error { background: #fee2e2; color: #991b1b; border: 1px solid #f87171; }
+<?php
+$title = "Gestion Missions - Admin";
+require "includes/head.php";
+?>
 
-        /* Formulaire */
-        .form-card { background: white; padding: 25px; border-radius: 10px; box-shadow: 0 4px 6px rgba(0,0,0,0.05); }
-        .form-group { margin-bottom: 15px; }
-        .form-group label { display: block; font-weight: bold; margin-bottom: 5px; color: #374151; }
-        .form-control { width: 100%; padding: 12px; border: 1px solid #d1d5db; border-radius: 6px; font-size: 1rem; }
-        .form-control:focus { outline: 2px solid #2563eb; border-color: transparent; }
-        textarea.form-control { height: 80px; resize: vertical; }
-
-        .grid-2 { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
-
-        /* Boutons */
-        .btn-blue { background-color: #2563eb; color: white; border: none; border-radius: 6px; cursor: pointer; font-weight: bold; transition: background 0.2s; }
-        .btn-blue:hover { background-color: #1d4ed8; }
-
-        /* Liste */
-        .list-header { margin-top: 50px; margin-bottom: 20px; border-bottom: 2px solid #e5e7eb; padding-bottom: 10px; display: flex; justify-content: space-between; align-items: center; }
-
-        .article-item {
-            display: flex; align-items: center; background: white;
-            padding: 15px; margin-bottom: 15px; border-radius: 8px;
-            border: 1px solid #e5e7eb; transition: transform 0.2s;
-        }
-        .article-item:hover { transform: translateY(-2px); box-shadow: 0 4px 6px rgba(0,0,0,0.05); }
-
-        /* Icône Mission */
-        .mission-icon {
-            width: 60px; height: 60px; background-color: #fef3c7; color: #d97706; /* Jaune/Orange pour les missions */
-            border-radius: 50%; display: flex; align-items: center; justify-content: center;
-            font-size: 1.5rem; margin-right: 20px; font-weight: bold; border: 2px solid #fde68a;
-        }
-
-        .art-info { flex-grow: 1; }
-        .art-title { font-size: 1.1rem; font-weight: bold; color: #111827; margin: 0 0 5px 0; }
-        .art-sub { font-size: 0.9rem; color: #6b7280; margin-bottom: 5px; }
-
-        /* Badges */
-        .badge { display: inline-block; background: #f3f4f6; padding: 2px 8px; border-radius: 12px; font-size: 0.8rem; color: #4b5563; border: 1px solid #e5e7eb; margin-right: 5px;}
-
-        .btn-delete {
-            background: #fef2f2; color: #dc2626; text-decoration: none;
-            padding: 8px 12px; border-radius: 6px; font-weight: bold; font-size: 0.9rem; border: 1px solid #fee2e2;
-        }
-        .btn-delete:hover { background: #fee2e2; }
-
-    </style>
-</head>
 <body style="background-color: #f9fafb;">
 
     <nav class="navbar">
@@ -132,14 +79,15 @@ try {
             </span>
             <div class="nav-links">
                 <a href="admin.php" style="color:white; margin-right: 15px; text-decoration:none;">Retour</a>
-                <a href="logout.php" class="btn btn-white" style="padding:0.5rem 1rem; font-size:0.9rem;">Déconnexion</a>
+                <a href="logout.php" class="btn btn-white"
+                    style="padding:0.5rem 1rem; font-size:0.9rem;">Déconnexion</a>
             </div>
         </div>
     </nav>
 
     <main class="container admin-section" style="padding-top: 100px;">
 
-        <?php if($message): ?>
+        <?php if ($message): ?>
             <div class="alert <?php echo $message_type; ?>">
                 <?php echo $message; ?>
             </div>
@@ -155,7 +103,8 @@ try {
                 <div class="grid-2">
                     <div class="form-group">
                         <label>Titre de la mission</label>
-                        <input type="text" name="titre" class="form-control" required placeholder="Ex: Collecte alimentaire">
+                        <input type="text" name="titre" class="form-control" required
+                            placeholder="Ex: Collecte alimentaire">
                     </div>
                     <div class="form-group">
                         <label>Lieu</label>
@@ -176,10 +125,12 @@ try {
 
                 <div class="form-group">
                     <label>Description</label>
-                    <textarea name="description" class="form-control" placeholder="Détails de la mission..." required></textarea>
+                    <textarea name="description" class="form-control" placeholder="Détails de la mission..."
+                        required></textarea>
                 </div>
 
-                <button type="submit" name="ajouter" class="btn btn-blue" style="width:100%; padding: 15px; font-size: 1rem;">
+                <button type="submit" name="ajouter" class="btn btn-blue"
+                    style="width:100%; padding: 15px; font-size: 1rem;">
                     Ajouter la mission
                 </button>
             </form>
@@ -189,13 +140,13 @@ try {
             <h2 style="color:#374151; margin:0;">Missions planifiées (<?php echo count($missions); ?>)</h2>
         </div>
 
-        <?php if(count($missions) == 0): ?>
+        <?php if (count($missions) == 0): ?>
             <div style="text-align:center; padding: 40px; color: gray; background:white; border-radius:8px;">
                 <p>Aucune mission prévue pour le moment.</p>
             </div>
         <?php else: ?>
 
-            <?php foreach($missions as $m): ?>
+            <?php foreach ($missions as $m): ?>
                 <div class="article-item">
 
                     <div class="mission-icon">
@@ -214,10 +165,8 @@ try {
                     </div>
 
                     <div class="art-actions">
-                        <a href="admin_missions.php?delete=<?php echo $m['id_mission']; ?>"
-                           class="btn-delete"
-                           onclick="return confirm('Supprimer cette mission ?');"
-                           title="Supprimer">
+                        <a href="admin_missions.php?delete=<?php echo $m['id_mission']; ?>" class="btn-delete"
+                            onclick="return confirm('Supprimer cette mission ?');" title="Supprimer">
                             🗑️ Suppr.
                         </a>
                     </div>
@@ -230,5 +179,182 @@ try {
     </main>
 
     <div style="height: 50px;"></div>
+
+    <style>
+        /* MÊME CSS QUE LES AUTRES PAGES ADMIN */
+        .admin-section {
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        /* Alertes */
+        .alert {
+            padding: 15px;
+            border-radius: 8px;
+            margin-bottom: 20px;
+            font-weight: bold;
+            text-align: center;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        .success {
+            background: #d1fae5;
+            color: #065f46;
+            border: 1px solid #34d399;
+        }
+
+        .error {
+            background: #fee2e2;
+            color: #991b1b;
+            border: 1px solid #f87171;
+        }
+
+        /* Formulaire */
+        .form-card {
+            background: white;
+            padding: 25px;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+        }
+
+        .form-group {
+            margin-bottom: 15px;
+        }
+
+        .form-group label {
+            display: block;
+            font-weight: bold;
+            margin-bottom: 5px;
+            color: #374151;
+        }
+
+        .form-control {
+            width: 100%;
+            padding: 12px;
+            border: 1px solid #d1d5db;
+            border-radius: 6px;
+            font-size: 1rem;
+        }
+
+        .form-control:focus {
+            outline: 2px solid #2563eb;
+            border-color: transparent;
+        }
+
+        textarea.form-control {
+            height: 80px;
+            resize: vertical;
+        }
+
+        .grid-2 {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+        }
+
+        /* Boutons */
+        .btn-blue {
+            background-color: #2563eb;
+            color: white;
+            border: none;
+            border-radius: 6px;
+            cursor: pointer;
+            font-weight: bold;
+            transition: background 0.2s;
+        }
+
+        .btn-blue:hover {
+            background-color: #1d4ed8;
+        }
+
+        /* Liste */
+        .list-header {
+            margin-top: 50px;
+            margin-bottom: 20px;
+            border-bottom: 2px solid #e5e7eb;
+            padding-bottom: 10px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .article-item {
+            display: flex;
+            align-items: center;
+            background: white;
+            padding: 15px;
+            margin-bottom: 15px;
+            border-radius: 8px;
+            border: 1px solid #e5e7eb;
+            transition: transform 0.2s;
+        }
+
+        .article-item:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+        }
+
+        /* Icône Mission */
+        .mission-icon {
+            width: 60px;
+            height: 60px;
+            background-color: #fef3c7;
+            color: #d97706;
+            /* Jaune/Orange pour les missions */
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+            margin-right: 20px;
+            font-weight: bold;
+            border: 2px solid #fde68a;
+        }
+
+        .art-info {
+            flex-grow: 1;
+        }
+
+        .art-title {
+            font-size: 1.1rem;
+            font-weight: bold;
+            color: #111827;
+            margin: 0 0 5px 0;
+        }
+
+        .art-sub {
+            font-size: 0.9rem;
+            color: #6b7280;
+            margin-bottom: 5px;
+        }
+
+        /* Badges */
+        .badge {
+            display: inline-block;
+            background: #f3f4f6;
+            padding: 2px 8px;
+            border-radius: 12px;
+            font-size: 0.8rem;
+            color: #4b5563;
+            border: 1px solid #e5e7eb;
+            margin-right: 5px;
+        }
+
+        .btn-delete {
+            background: #fef2f2;
+            color: #dc2626;
+            text-decoration: none;
+            padding: 8px 12px;
+            border-radius: 6px;
+            font-weight: bold;
+            font-size: 0.9rem;
+            border: 1px solid #fee2e2;
+        }
+
+        .btn-delete:hover {
+            background: #fee2e2;
+        }
+    </style>
 </body>
+
 </html>
