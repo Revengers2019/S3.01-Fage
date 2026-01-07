@@ -16,6 +16,7 @@
             <li><a href="guideElu.php">Le Guide</a></li>
             <li><a href="scolariteEtudiant.php">Scolarité</a></li>
             <li><a href="Civique.php">Civique</a></li>
+            <li><a href="admin.php">Se connecter</a></li>
         </ul>
     </div>
 
@@ -29,6 +30,7 @@
         <li><a href="guideElu.php">Le Guide</a></li>
         <li><a href="scolariteEtudiant.php">Scolarité</a></li>
         <li><a href="Civique.php">Civique</a></li>
+        <li><a href="admin.php"><i class="bi bi-person-circle"></i></a></li>
     </ul>
 
 </nav>
