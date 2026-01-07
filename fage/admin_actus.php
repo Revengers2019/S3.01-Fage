@@ -68,10 +68,7 @@ try {
     <meta charset="UTF-8">
     <title>Gestion Actualités</title>
 <link rel="stylesheet" href="assets/css/style.css">
-    <style>
-
-
-    </style>
+ 
 </head>
 <body style="background-color: #f9fafb;">
 
@@ -172,3 +169,4 @@ try {
 
     <div style="height: 50px;"></div> </body>
 </html>
+
