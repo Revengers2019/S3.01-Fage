@@ -1,5 +1,5 @@
 <?php
 
-require "router.php";
+require "includes/router.php";
 
 ?>
