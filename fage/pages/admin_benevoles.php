@@ -73,11 +73,7 @@ $missions = $pdo->query($sql)->fetchAll();
 
     <div class="container">
 
-        <div class="nav-admin">
-            <a href="admin.php">← Retour Dashboard</a>
-            <a href="admin_missions.php">Gérer les Missions</a>
-            <a href="admin_benevoles.php" class="active">Gérer les Équipes (Bénévoles)</a>
-        </div>
+      
 
         <h1>Gestion des Équipes Terrain 👷</h1>
         <p>Ajoutez les bénévoles qui vous contactent par mail directement dans leur mission.</p>
