@@ -10,14 +10,28 @@ if (!isset($_SESSION['user_id'])) {
 $message = "";
 
 // 2. SUPPRESSION : Si on clique sur la poubelle
-if (isset($_GET['supprimer'])) {
-    $id = $_GET['supprimer'];
+$route = $_GET['/'] ?? '/';
+$id_a_supprimer = null;
+
+// Vérifie si la route contient ?supprimer=
+$supPos = strpos($route, '?supprimer=');
+if ($supPos !== false) {
+    $possibleId = substr($route, $supPos + strlen('?supprimer='));
+    if (ctype_digit($possibleId)) {
+        $id_a_supprimer = (int) $possibleId;
+        $route = '/newsletter_admin';
+    }
+}
+
+if ($id_a_supprimer !== null) {
     try {
         $stmt = $pdo->prepare("DELETE FROM newsletter WHERE id_inscrit = ?");
-        $stmt->execute([$id]);
-        $message = "🗑️ L'email a été supprimé de la liste.";
+        $stmt->execute([$id_a_supprimer]);
+        $message = "🗑️ L'email a été supprimé de la liste avec succès.";
+        $message_type = "success";
     } catch (Exception $e) {
-        $message = "Erreur lors de la suppression.";
+        $message = "❌ Erreur lors de la suppression.";
+        $message_type = "error";
     }
 }
 
@@ -93,7 +107,7 @@ require "includes/head.php";
                                     <?php echo date("d/m/Y", strtotime($i['date_inscription'])); ?>
                                 </td>
                                 <td style="text-align:right;">
-                                    <a href="admin_newsletter.php?supprimer=<?php echo $i['id_inscrit']; ?>" class="btn-del"
+                                    <a href="?/=/newsletter_admin?supprimer=<?php echo $i['id_inscrit']; ?>" class="btn-del"
                                         onclick="return confirm('Supprimer cet inscrit ?');">
                                         🗑️
                                     </a>
@@ -107,7 +121,7 @@ require "includes/head.php";
         </div>
 
     </main>
-5
+    5
 </body>
 
 </html>

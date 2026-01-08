@@ -164,7 +164,7 @@ require "includes/head.php";
                     </div>
 
                     <div class="art-actions">
-                        <a href="admin_missions.php?delete=<?php echo $m['id_mission']; ?>" class="btn-delete"
+                        <a href="missions_admin?supprimer=<?php echo $m['id_mission']; ?>" class="btn-delete"
                             onclick="return confirm('Supprimer cette mission ?');" title="Supprimer">
                             🗑️ Suppr.
                         </a>

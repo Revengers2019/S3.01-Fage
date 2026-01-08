@@ -79,15 +79,23 @@ $route = $_GET['/'] ?? '/';
 
 foreach ($routes as $r) {
 
-    // --- cas spécial pour read?id=xx --- \\
     if ($r['path'] === '/read' && str_starts_with($route, '/read')) {
         require __DIR__ . '/../pages/read.php';
         exit;
     }
 
-    // --- cas spécial pour actus_admin?id=xx --- \\
     if ($r['path'] === '/actus_admin' && str_starts_with($route, '/actus_admin')) {
         require __DIR__ . '/../pages/admin_actus.php';
+        exit;
+    }
+
+    if ($r['path'] === '/newsletter_admin' && str_starts_with($route, '/newsletter_admin')) {
+        require __DIR__ . '/../pages/admin_newsletter.php';
+        exit;
+    }
+
+    if ($r['path'] === '/missions_admin' && str_starts_with($route, '/missions_admin')) {
+        require __DIR__ . '/../pages/admin_missions.php';
         exit;
     }
 

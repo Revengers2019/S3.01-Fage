@@ -14,13 +14,13 @@ $message_type = "";
 $route = $_GET['/'] ?? '/';
 $id_a_supprimer = null;
 
-// Vérifier si la route contient ?supprimer=
+// Vérifie si la route contient ?supprimer=
 $supPos = strpos($route, '?supprimer=');
 if ($supPos !== false) {
     $possibleId = substr($route, $supPos + strlen('?supprimer='));
     if (ctype_digit($possibleId)) {
         $id_a_supprimer = (int)$possibleId;
-        $route = '/actus_admin'; // nettoyer la route pour le router
+        $route = '/actus_admin';
     }
 }
 
