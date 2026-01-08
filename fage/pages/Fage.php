@@ -24,7 +24,7 @@ require "includes/head.php";
             </div>
         </section>
 
-        <section class="grid-2 reveal" style="margin-bottom: 4rem;">
+        <section class="grid-2 reveal" style="margin-bottom: 4rem;" id="presentation">
             <div>
                 <h2 style="font-size: 2rem; font-weight: 700; margin-bottom: 1rem; color: var(--text-color);">
                     Présentation</h2>
@@ -39,7 +39,7 @@ require "includes/head.php";
             </div>
         </section>
 
-        <section class="card reveal" style="margin-bottom: 3rem;">
+        <section class="card reveal" style="margin-bottom: 3rem;" id="equipenationale">
             <div class="grid-2">
                 <div>
                     <h3 style="font-size: 1.5rem; font-weight: 700; color: var(--primary-blue); margin-bottom: 1.5rem;">
@@ -68,7 +68,7 @@ require "includes/head.php";
             </div>
         </section>
 
-        <section class="reveal">
+        <section class="reveal" id="visuels">
             <h2 style="font-size: 2rem; font-weight: 700; margin-bottom: 2rem;">Graphiques & Visuels</h2>
             <div class="grid-3">
                 <div class="card" style="padding: 0; overflow: hidden;">

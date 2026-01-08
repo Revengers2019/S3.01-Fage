@@ -39,7 +39,7 @@ require "includes/head.php";
                     <h3><?php echo htmlspecialchars($art['titre']); ?></h3>
                     <p>Publié le <?php echo date("d/m/Y", strtotime($art['date_publication'])); ?></p>
 
-                    <a href="read.php?id=<?php echo $art['id_actu']; ?>" class="btn-lire-suite"
+                    <a href="?/=/read?id=<?php echo $art['id_actu']; ?>" class="btn-lire-suite"
                         style="display:inline-block; margin-top:10px; padding:8px 15px; background-color:#3b82f6; color:white; text-decoration:none; border-radius:5px;">
                         Lire la suite &rarr;
                     </a>

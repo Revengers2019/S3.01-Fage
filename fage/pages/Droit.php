@@ -27,7 +27,7 @@ require "includes/head.php";
             </div>
         </section>
 
-        <section class="card reveal" style="margin-bottom: 3rem;">
+        <section class="card reveal" style="margin-bottom: 3rem;" id="defensedroits">
             <h2 style="font-size: 2rem; color: var(--primary-blue); margin-bottom: 1.5rem; font-weight: 700;">La défense
                 des droits</h2>
             <p style="margin-bottom: 1rem;">
@@ -44,7 +44,7 @@ require "includes/head.php";
             </p>
         </section>
 
-        <section class="reveal">
+        <section class="reveal" id="faq">
             <h2 style="font-size: 2rem; font-weight: 700; margin-bottom: 1.5rem;">Foire aux questions</h2>
             <p style="margin-bottom: 1.5rem; color: #666;">Cliquez sur une question pour afficher la réponse.</p>
 

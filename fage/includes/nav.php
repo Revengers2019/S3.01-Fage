@@ -1,37 +1,36 @@
 <nav class="navbar">
     <div class="nav-container">
-       <a href="index.php" class="nav-logo">
-                 <img src="https://ageparis.org/agepwebcontent/uploads/2013/01/fage-blanc-logo-min.png" alt="Logo FAGE">
-             </a>
+        <a href="index.php" class="nav-logo">
+            <img src="https://ageparis.org/agepwebcontent/uploads/2013/01/fage-blanc-logo-min.png" alt="Logo FAGE">
+        </a>
 
         <button id="menu-btn" class="hamburger"><span></span><span></span><span></span></button>
 
         <ul class="nav-links">
             <li><a href="?/=/">Accueil</a></li>
-            <li><a href="?/=/Fage">La FAGE</a></li>
-            <li><a href="actualites.php">Actualités</a></li>
-            <li><a href="missions.php">Missions</a></li>
-            <li><a href="Droit.php">Nos Droits</a></li>
-            <li><a href="formationFage.php">Formation</a></li>
-            <li><a href="guideElu.php">Le Guide</a></li>
-            <li><a href="scolariteEtudiant.php">Scolarité</a></li>
-            <li><a href="Civique.php">Civique</a></li>
-            <li><a href="login.php">Se connecter</a></li>
+            <li><a href="?/=/fage">La FAGE</a></li>
+            <li><a href="?/=/actualites">Actualités</a></li>
+            <li><a href="?/=/missions">Missions</a></li>
+            <li><a href="?/=/droit">Nos Droits</a></li>
+            <li><a href="?/=/formationFage">Formation</a></li>
+            <li><a href="?/=/guideElu">Le Guide</a></li>
+            <li><a href="?/=/scolarite">Scolarité</a></li>
+            <li><a href="?/=/civique">Civique</a></li>
+            <li><a href="?/=/login">Se connecter</a></li>
         </ul>
     </div>
 
     <ul id="mobile-menu" class="mobile-menu">
         <li><a href="?/=/">Accueil</a></li>
-        <li><a href="?/=/Fage">La FAGE</a></li>
-        <li><a href="actualites.php">Actualités</a></li>
-        <li><a href="missions.php">Missions</a></li>
-        <li><a href="Droit.php">Nos Droits</a></li>
-        <li><a href="formationFage.php">Formation</a></li>
-        <li><a href="guideElu.php">Le Guide</a></li>
-        <li><a href="scolariteEtudiant.php">Scolarité</a></li>
-        <li><a href="Civique.php">Civique</a></li>
-        <li><a href="login.php"><i class="bi bi-person-circle"></i></a></li>
+        <li><a href="?/=/fage">La FAGE</a></li>
+        <li><a href="?/=/actualites">Actualités</a></li>
+        <li><a href="?/=/missions">Missions</a></li>
+        <li><a href="?/=/droit">Nos Droits</a></li>
+        <li><a href="?/=/formationFage">Formation</a></li>
+        <li><a href="?/=/guideElu">Le Guide</a></li>
+        <li><a href="?/=/scolarite">Scolarité</a></li>
+        <li><a href="?/=/civique">Civique</a></li>
+        <li><a href="?/=/login"><i class="bi bi-person-circle"></i></a></li>
     </ul>
 
 </nav>
-

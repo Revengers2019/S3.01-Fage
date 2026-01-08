@@ -4,35 +4,34 @@
         <div class="footer-col">
             <h3>La FAGE</h3>
             <ul>
-                <li><a href="Fage.php">Qui sommes-nous ?</a></li>
-                <li><a href="Fage.php">L'équipe nationale</a></li>
-                <li><a href="Fage.php">Nos membres</a></li>
+                <li><a href="?/=/fage#presentation">Qui sommes-nous ?</a></li>
+                <li><a href="?/=/fage#equipenationale">L'équipe nationale</a></li>
+                <li><a href="?/=/fage#visuels">Nos visuels</a></li>
             </ul>
         </div>
 
         <div class="footer-col">
             <h3>Nos Droits</h3>
             <ul>
-                <li><a href="Droit.php">Défense des droits</a></li>
-                <li><a href="Droit.php">FAQ</a></li>
-                <li><a href="Droit.php">Gouvernance</a></li>
+                <li><a href="?/=/droit#defensedroits">Défense des droits</a></li>
+                <li><a href="?/=/droit#faq">FAQ</a></li>
             </ul>
         </div>
 
         <div class="footer-col">
             <h3>Formations</h3>
             <ul>
-                <li><a href="formationFage.php">Catalogue complet</a></li>
-                <li><a href="guideElu.php">Guide de l'élu</a></li>
-                <li><a href="Civique.php">Formation Civique</a></li>
+                <li><a href="?/=/formationFage">Catalogue complet</a></li>
+                <li><a href="?/=/guideElu">Guide de l'élu</a></li>
+                <li><a href="?/=/civique">Formation Civique</a></li>
             </ul>
         </div>
 
         <div class="footer-col">
             <h3>Vie Étudiante</h3>
             <ul>
-                <li><a href="scolariteEtudiant.php">Scolarité & Précarité</a></li>
-                <li><a href="read.php">Coût de la rentrée</a></li>
+                <li><a href="?/=/scolariteEtudiant">Scolarité & Précarité</a></li>
+                <li><a href="?/=/read">Coût de la rentrée</a></li>
             </ul>
         </div>
 
@@ -46,7 +45,7 @@
         </div>
 
         <div class="footer-col" style="display:flex; align-items:center;">
-            <a href="newsletter.php" class="btn btn-white" style="color:var(--primary-blue)">Newsletter</a>
+            <a href="?/=/newsletter" class="btn btn-white" style="color:var(--primary-blue)">Newsletter</a>
         </div>
 
     </div>

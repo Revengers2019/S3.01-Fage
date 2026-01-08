@@ -20,7 +20,7 @@ if (isset($_POST['ajouter_benevole'])) {
     if (!empty($nom) && !empty($id_mission)) {
         // On insère le bénévole avec l'ID de la mission direct
         $req = $pdo->prepare("INSERT INTO benevoles (nom, prenom, email, id_mission) VALUES (?, ?, ?, ?)");
-        if($req->execute([$nom, $prenom, $email, $id_mission])) {
+        if ($req->execute([$nom, $prenom, $email, $id_mission])) {
             $msg = "✅ Bénévole ajouté à l'équipe !";
         } else {
             $msg = "❌ Erreur lors de l'ajout.";
@@ -43,24 +43,24 @@ $missions = $pdo->query($sql)->fetchAll();
 
 <!DOCTYPE html>
 <html lang="fr">
-<head>
-    <meta charset="UTF-8">
-    <title>Gestion des Équipes - Admin</title>
-    <link rel="stylesheet" href="assets/css/style.css">
 
-</head>
+<?php
+$title = "Gestion Equipes - Admin";
+require "includes/head.php";
+?>
+
 <body>
-       <nav class="navbar">
-            <div class="nav-container">
-                <span style="color:white; font-weight:bold; font-size:1.2rem;">
-                    Admin : <?php echo htmlspecialchars($_SESSION['prenom']); ?>
-                </span>
-                <div class="nav-links">
-                    <a href="admin.php" style="color:white; margin-right: 15px; text-decoration:none;">Retour</a>
-                    <a href="logout.php" class="btn btn-white" style="padding:0.5rem 1rem; font-size:0.9rem;">Déconnexion</a>
-                </div>
+    <nav class="navbar">
+        <div class="nav-container">
+            <span style="color:white; font-weight:bold; font-size:1.2rem;">
+                Admin : <?php echo htmlspecialchars($_SESSION['prenom']); ?>
+            </span>
+            <div class="nav-links">
+                <a href="?/=/admin" style="color:white; margin-right: 15px; text-decoration:none;">Retour</a>
+                <a href="?/=/" class="btn btn-white" style="padding:0.5rem 1rem; font-size:0.9rem;">Déconnexion</a>
             </div>
-        </nav>
+        </div>
+    </nav>
     <div style="background: white; padding: 15px; border-bottom: 1px solid #ddd;">
         <div style="max-width: 1000px; margin: 0 auto; display: flex; justify-content: space-between;">
             <div style="font-weight: bold;">ADMINISTRATION FAGE</div>
@@ -73,28 +73,25 @@ $missions = $pdo->query($sql)->fetchAll();
 
     <div class="container">
 
-        <div class="nav-admin">
-            <a href="admin.php">← Retour Dashboard</a>
-            <a href="admin_missions.php">Gérer les Missions</a>
-            <a href="admin_benevoles.php" class="active">Gérer les Équipes (Bénévoles)</a>
-        </div>
+
 
         <h1>Gestion des Équipes Terrain 👷</h1>
         <p>Ajoutez les bénévoles qui vous contactent par mail directement dans leur mission.</p>
 
-        <?php if(!empty($msg)): ?>
+        <?php if (!empty($msg)): ?>
             <div style="background: #dcfce7; color: #166534; padding: 15px; border-radius: 8px; margin-bottom: 20px;">
                 <?php echo $msg; ?>
             </div>
         <?php endif; ?>
 
-        <?php foreach($missions as $m): ?>
+        <?php foreach ($missions as $m): ?>
 
             <div class="mission-admin-card">
                 <div class="header-mission">
                     <div>
                         <div class="titre-mission"><?php echo htmlspecialchars($m['titre']); ?></div>
-                        <div class="date-mission">📅 Le <?php echo date('d/m/Y à H:i', strtotime($m['date_mission'])); ?></div>
+                        <div class="date-mission">📅 Le <?php echo date('d/m/Y à H:i', strtotime($m['date_mission'])); ?>
+                        </div>
                     </div>
 
                     <div class="compteur-box">
@@ -108,26 +105,27 @@ $missions = $pdo->query($sql)->fetchAll();
                 <div class="liste-inscrits">
                     <h4>👥 Bénévoles déjà validés :</h4>
                     <?php
-                        // Petite requête pour récupérer les noms des gens de CETTE mission
-                        $sql_b = "SELECT * FROM benevoles WHERE id_mission = ?";
-                        $req_b = $pdo->prepare($sql_b);
-                        $req_b->execute([$m['id_mission']]);
-                        $team = $req_b->fetchAll();
+                    // Petite requête pour récupérer les noms des gens de CETTE mission
+                    $sql_b = "SELECT * FROM benevoles WHERE id_mission = ?";
+                    $req_b = $pdo->prepare($sql_b);
+                    $req_b->execute([$m['id_mission']]);
+                    $team = $req_b->fetchAll();
 
-                        if(count($team) == 0) {
-                            echo "<span style='color:#9ca3af; font-style:italic;'>Personne pour l'instant...</span>";
-                        } else {
-                            foreach($team as $b) {
-                                echo '<span class="tag-benevole">👤 ' . htmlspecialchars($b['prenom']) . ' ' . htmlspecialchars($b['nom']) . '</span>';
-                            }
+                    if (count($team) == 0) {
+                        echo "<span style='color:#9ca3af; font-style:italic;'>Personne pour l'instant...</span>";
+                    } else {
+                        foreach ($team as $b) {
+                            echo '<span class="tag-benevole">👤 ' . htmlspecialchars($b['prenom']) . ' ' . htmlspecialchars($b['nom']) . '</span>';
                         }
+                    }
                     ?>
                 </div>
 
-                <?php if($m['inscrits'] < $m['nb_benevoles_requis']): ?>
+                <?php if ($m['inscrits'] < $m['nb_benevoles_requis']): ?>
 
                     <form method="POST" class="form-ajout-rapide">
-                        <div style="width: 100%; font-weight: bold; margin-bottom: 5px; font-size: 0.9rem;">➕ Ajouter un bénévole reçu par mail :</div>
+                        <div style="width: 100%; font-weight: bold; margin-bottom: 5px; font-size: 0.9rem;">➕ Ajouter un
+                            bénévole reçu par mail :</div>
 
                         <input type="hidden" name="id_mission" value="<?php echo $m['id_mission']; ?>">
 
@@ -139,7 +137,8 @@ $missions = $pdo->query($sql)->fetchAll();
                     </form>
 
                 <?php else: ?>
-                    <div style="margin-top: 15px; color: #d97706; font-weight: bold; text-align: center; background: #fef3c7; padding: 10px; border-radius: 5px;">
+                    <div
+                        style="margin-top: 15px; color: #d97706; font-weight: bold; text-align: center; background: #fef3c7; padding: 10px; border-radius: 5px;">
                         🏆 Cette mission est COMPLÈTE !
                     </div>
                 <?php endif; ?>
@@ -148,11 +147,12 @@ $missions = $pdo->query($sql)->fetchAll();
 
         <?php endforeach; ?>
 
-        <?php if(count($missions) == 0): ?>
+        <?php if (count($missions) == 0): ?>
             <p>Aucune mission programmée. Allez d'abord en créer une.</p>
         <?php endif; ?>
 
     </div>
 
 </body>
+
 </html>

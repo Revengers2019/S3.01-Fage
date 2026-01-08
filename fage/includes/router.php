@@ -78,6 +78,13 @@ $routes = [
 $route = $_GET['/'] ?? '/';
 
 foreach ($routes as $r) {
+    // Cas spécial pour /read
+    if (substr($route, 0, 5) === '/read') {
+        require __DIR__ . '/../pages/read.php';
+        exit;
+    }
+
+    // Routes normales
     if ($route === $r['path']) {
         require __DIR__ . '/../pages/' . $r['link'];
         exit;

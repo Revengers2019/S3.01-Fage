@@ -78,9 +78,8 @@ require "includes/head.php";
                 Admin : <?php echo htmlspecialchars($_SESSION['prenom']); ?>
             </span>
             <div class="nav-links">
-                <a href="admin.php" style="color:white; margin-right: 15px; text-decoration:none;">Retour</a>
-                <a href="logout.php" class="btn btn-white"
-                    style="padding:0.5rem 1rem; font-size:0.9rem;">Déconnexion</a>
+                <a href="?/=/admin" style="color:white; margin-right: 15px; text-decoration:none;">Retour</a>
+                <a href="?/=/" class="btn btn-white" style="padding:0.5rem 1rem; font-size:0.9rem;">Déconnexion</a>
             </div>
         </div>
     </nav>
