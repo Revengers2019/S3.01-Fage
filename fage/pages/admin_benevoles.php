@@ -73,8 +73,6 @@ require "includes/head.php";
 
     <div class="container">
 
-
-
         <h1>Gestion des Équipes Terrain 👷</h1>
         <p>Ajoutez les bénévoles qui vous contactent par mail directement dans leur mission.</p>
 
@@ -154,5 +152,4 @@ require "includes/head.php";
     </div>
 
 </body>
-
 </html>
