@@ -1,18 +1,30 @@
 <?php
 session_start();
 require 'includes/db.php';
-// Sécurité : Si pas connecté, redirection
+
 if (!isset($_SESSION['user_id'])) {
-    header("Location: login.php");
+    header("Location: ?/=/login");
     exit();
 }
 
 $message = "";
 $message_type = "";
 
-// --- 1. TRAITEMENT : SUPPRESSION D'UN ARTICLE ---
-if (isset($_GET['supprimer'])) {
-    $id_a_supprimer = $_GET['supprimer'];
+// --- 1. TRAITEMENT : SUPPRESSION D'UN ARTICLE --- \\
+$route = $_GET['/'] ?? '/';
+$id_a_supprimer = null;
+
+// Vérifier si la route contient ?supprimer=
+$supPos = strpos($route, '?supprimer=');
+if ($supPos !== false) {
+    $possibleId = substr($route, $supPos + strlen('?supprimer='));
+    if (ctype_digit($possibleId)) {
+        $id_a_supprimer = (int)$possibleId;
+        $route = '/actus_admin'; // nettoyer la route pour le router
+    }
+}
+
+if ($id_a_supprimer !== null) {
     try {
         $stmt = $pdo->prepare("DELETE FROM actualite WHERE id_actu = ?");
         $stmt->execute([$id_a_supprimer]);
@@ -24,7 +36,7 @@ if (isset($_GET['supprimer'])) {
     }
 }
 
-// --- 2. TRAITEMENT : AJOUT D'UN ARTICLE ---
+// --- 2. TRAITEMENT : AJOUT D'UN ARTICLE --- \\
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     if (!empty($_POST['titre']) && !empty($_POST['contenu'])) {
 
@@ -53,7 +65,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     }
 }
 
-// --- 3. RÉCUPÉRATION DE LA LISTE (Mise à jour après ajout/suppression) ---
+// --- 3. RÉCUPÉRATION DE LA LISTE (Mise à jour après ajout/suppression) --- \\
 try {
     $stmt = $pdo->query("SELECT * FROM actualite ORDER BY date_publication DESC");
     $mes_articles = $stmt->fetchAll();
@@ -98,7 +110,7 @@ require "includes/head.php";
                 ➕ Ajouter une nouvelle actualité
             </h2>
 
-            <form method="POST" action="admin_actus.php">
+            <form method="POST" action="?/=/actus_admin">
                 <div class="grid-2" style="gap: 20px;">
                     <div class="form-group">
                         <label>Titre de l'article</label>
@@ -153,12 +165,12 @@ require "includes/head.php";
                     </div>
 
                     <div class="art-actions">
-                        <a href="read.php?id=<?php echo $art['id_actu']; ?>" target="_blank" class="btn-view"
+                        <a href="?/=/read?id=<?php echo $art['id_actu']; ?>" target="_blank" class="btn-view"
                             title="Voir l'article">
                             👁️ Voir
                         </a>
 
-                        <a href="admin_actus.php?supprimer=<?php echo $art['id_actu']; ?>" class="btn-delete"
+                        <a href="?/=/actus_admin?supprimer=<?php echo $art['id_actu']; ?>" class="btn-delete"
                             onclick="return confirm('Êtes-vous sûr de vouloir supprimer cet article définitivement ?');"
                             title="Supprimer">
                             🗑️ Suppr.
