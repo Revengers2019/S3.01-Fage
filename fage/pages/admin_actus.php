@@ -2,7 +2,8 @@
 session_start();
 require 'includes/db.php';
 
-if (!isset($_SESSION['user_id'])) {
+require 'includes/roleverif.php';
+if(!isadmin()){
     header("Location: ?/=/login");
     exit();
 }

@@ -1,8 +1,9 @@
 <?php
 session_start();
 require 'includes/db.php';
-// Sécurité : Si pas connecté, redirection
-if (!isset($_SESSION['user_id'])) {
+
+require 'includes/roleverif.php';
+if(!isadmin()){
     header("Location: ?/=/login");
     exit();
 }

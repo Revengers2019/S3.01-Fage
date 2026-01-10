@@ -1,7 +1,8 @@
 <?php
 session_start();
-// Sécurité : Si l'utilisateur n'est pas connecté, on le renvoie au login
-if (!isset($_SESSION['user_id'])) {
+
+require "includes/roleverif.php";
+if(!isadmin()){
     header("Location: ?/=/login");
     exit();
 }
@@ -25,7 +26,7 @@ require "includes/head.php";
             <div class="nav-links">
                 <a href="?/=/" style="color:white; margin-right:15px; text-decoration:none;">Voir
                     le site</a>
-                <a href="?/=/" class="btn btn-white"
+                <a href="?/=/logout" class="btn btn-white"
                     style="padding:0.5rem 1rem; font-size:0.9rem;">Déconnexion</a>
             </div>
         </div>

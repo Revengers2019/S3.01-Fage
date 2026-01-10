@@ -1,8 +1,9 @@
 <?php
 session_start();
 require 'includes/db.php'; // Ton fichier de connexion rangé
-// Vérification de sécurité (Admin connecté ?)
-if (!isset($_SESSION['user_id'])) {
+
+require 'includes/roleverif.php';
+if(!isadmin()){
     header("Location: ?/=/login");
     exit();
 }
