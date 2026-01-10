@@ -1,10 +1,10 @@
 <?php
 session_start();
 require 'includes/db.php'; // Ton fichier de connexion rangé
-
+var_dump($_SESSION['user_id']);
 // Vérification de sécurité (Admin connecté ?)
 if (!isset($_SESSION['user_id'])) {
-    header("Location: login.php");
+    header("Location: ?/=/login");
     exit();
 }
 

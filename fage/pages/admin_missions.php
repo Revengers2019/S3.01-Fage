@@ -3,7 +3,7 @@ session_start();
 require 'includes/db.php';
 // Sécurité : Si pas connecté, redirection
 if (!isset($_SESSION['user_id'])) {
-    header("Location: login.php");
+    header("Location: ?/=/login");
     exit();
 }
 
