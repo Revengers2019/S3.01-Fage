@@ -1,6 +1,6 @@
 <?php
 session_start();
-require 'includes/db.php'; // Ton fichier de connexion rangé
+require 'includes/db.php'; // Ton fichier de connexion rangé \\
 
 require 'includes/roleverif.php';
 if (!isset($_SESSION['user_id'])) {
@@ -14,7 +14,7 @@ if(!isadmin()){
 
 $msg = "";
 
-// --- 1. TRAITEMENT : AJOUTER UN BÉNÉVOLE À UNE MISSION ---
+// --- 1. TRAITEMENT : AJOUTER UN BÉNÉVOLE À UNE MISSION --- \\
 if (isset($_POST['ajouter_benevole'])) {
     $nom = htmlspecialchars($_POST['nom']);
     $prenom = htmlspecialchars($_POST['prenom']);
@@ -24,7 +24,7 @@ if (isset($_POST['ajouter_benevole'])) {
     else
         $email = htmlspecialchars($_POST['email']);
 
-    $id_mission = intval($_POST['id_mission']); // L'ID est envoyé par le formulaire caché
+    $id_mission = intval($_POST['id_mission']); // L'ID est envoyé par le formulaire caché \\
 
     if (!empty($nom) && !empty($id_mission)) {
         // On insère le bénévole avec l'ID de la mission direct
@@ -38,8 +38,8 @@ if (isset($_POST['ajouter_benevole'])) {
     }
 }
 
-// --- 2. RÉCUPÉRATION DES MISSIONS ET COMPTAGE ---
-// Cette requête est "magique" : elle récupère les missions ET compte les bénévoles inscrits pour chacune
+// --- 2. RÉCUPÉRATION DES MISSIONS ET COMPTAGE --- \\
+// Cette requête est "magique" : elle récupère les missions ET compte les bénévoles inscrits pour chacune \\
 $sql = "SELECT m.*,
         (SELECT COUNT(*) FROM benevoles b WHERE b.id_mission = m.id_mission) as inscrits
         FROM missions m
@@ -104,7 +104,7 @@ require "includes/head.php";
                 <div class="liste-inscrits">
                     <h4>👥 Bénévoles déjà validés :</h4>
                     <?php
-                    // Petite requête pour récupérer les noms des gens de CETTE mission
+                    // Petite requête pour récupérer les noms des gens de CETTE mission \\
                     $sql_b = "SELECT * FROM benevoles WHERE id_mission = ?";
                     $req_b = $pdo->prepare($sql_b);
                     $req_b->execute([$m['id_mission']]);

@@ -7,11 +7,10 @@ require "includes/head.php";
 ?>
 
 <body>
+
     <?php include 'includes/nav.php'; ?>
 
-
     <main>
-
         <section class="hero-section">
             <img src="https://f.hellowork.com/edito/sites/5/2024/01/FAGE-visuels-768x432.jpeg" alt="FAGE Étudiants"
                 class="hero-bg-img">
@@ -28,7 +27,6 @@ require "includes/head.php";
             </div>
         </section>
         <br><br>
-
 
         <section id="actions" class="container grid-3">
             <article class="card reveal">
@@ -108,9 +106,7 @@ require "includes/head.php";
                     src="https://maps.google.com/maps?q=79%20Rue%20P%C3%A9rier%2C%2092120%20Montrouge&t=&z=15&ie=UTF8&iwloc=&output=embed">
                 </iframe>
             </div>
-
         </section>
-
     </main>
 
     <?php include 'includes/footer.php'; ?>

@@ -22,7 +22,6 @@ require "includes/head.php";
 
     <?php include 'includes/nav.php'; ?>
 
-
     <main class="container">
         <br><br>
 
@@ -99,74 +98,6 @@ require "includes/head.php";
     <?php include 'includes/footer.php'; ?>
 
     <script src="assets/js/script.js"></script>
-
-    <style>
-        /* PETIT CSS SUPPLÉMENTAIRE JUSTE POUR LA GRILLE DES MISSIONS */
-        .missions-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-            gap: 2rem;
-            margin-top: 2rem;
-            margin-bottom: 3rem;
-        }
-
-        /* On réutilise le style .card de ton site, mais on l'adapte pour les missions */
-        .mission-card {
-            background: white;
-            border-radius: 1rem;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
-            overflow: hidden;
-            border: 1px solid #e5e7eb;
-            display: flex;
-            flex-direction: column;
-            transition: transform 0.3s ease;
-        }
-
-        .mission-card:hover {
-            transform: translateY(-5px);
-        }
-
-        .mission-header {
-            background-color: var(--primary-blue, #2563eb);
-            /* Utilise ta couleur bleue */
-            color: white;
-            padding: 1rem;
-            text-align: center;
-        }
-
-        .mission-body {
-            padding: 1.5rem;
-            flex-grow: 1;
-        }
-
-        .mission-tag {
-            background: #fef3c7;
-            color: #d97706;
-            padding: 0.25rem 0.75rem;
-            border-radius: 20px;
-            font-size: 0.85rem;
-            font-weight: bold;
-            display: inline-block;
-            margin-bottom: 0.5rem;
-        }
-
-        .btn-participer {
-            display: block;
-            text-align: center;
-            background-color: #1f2937;
-            color: white;
-            padding: 0.75rem;
-            text-decoration: none;
-            font-weight: bold;
-            margin: 1.5rem;
-            border-radius: 0.5rem;
-            transition: background 0.2s;
-        }
-
-        .btn-participer:hover {
-            background-color: #374151;
-        }
-    </style>
 </body>
 
 </html>

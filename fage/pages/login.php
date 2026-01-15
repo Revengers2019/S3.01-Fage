@@ -1,5 +1,5 @@
 <?php
-session_start(); // On démarre la session pour mémoriser l'utilisateur connecté
+session_start();
 require 'includes/db.php';
 // Si le formulaire est envoyé (méthode POST)
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
