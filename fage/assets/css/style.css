@@ -127,7 +127,72 @@ img {
     text-decoration: underline;
     text-underline-offset: 6px;
 }
+/* =========================================
+   MENU MOBILE : VERSION PROPRE & MODERNE
+   ========================================= */
 
+.mobile-menu {
+    display: none;
+    flex-direction: column;
+    /* Un beau dégradé bleu profond */
+    background: linear-gradient(180deg, #1e3a8a 0%, #3b82f6 100%);
+    padding: 2rem;
+    gap: 15px;
+    box-shadow: inset 0 10px 20px rgba(0,0,0,0.2);
+}
+
+.mobile-menu.open {
+    display: flex;
+    animation: fadeIn 0.3s ease-out;
+}
+
+/* 1. LES LIENS NORMAUX (Accueil, Missions...) */
+.mobile-menu li a {
+    display: block;
+    text-align: center;
+    color: white !important; /* On force le blanc (annule le bleu d'avant) */
+    font-size: 1.2rem;
+    font-weight: 500;
+    padding: 10px 0;
+    background: transparent; /* Pas de fond gris moche */
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1); /* Petit trait fin discret */
+    transition: all 0.3s;
+    border-radius: 0;
+}
+
+.mobile-menu li a:hover {
+    color: #93c5fd !important; /* Bleu clair au survol */
+    padding-left: 10px; /* Petit effet de mouvement */
+    border-color: rgba(255, 255, 255, 0.4);
+}
+
+/* 2. LE BOUTON D'ACTION (Se connecter / Compte) */
+/* On cible spécifiquement les éléments qui ont la classe .btn */
+.mobile-menu li a.btn {
+    margin-top: 20px; /* On l'écarte un peu des autres */
+    background-color: white !important; /* Fond Blanc pur */
+    color: #2563eb !important; /* Texte Bleu vif */
+    border-radius: 50px; /* Forme de pilule */
+    padding: 15px 30px;
+    font-weight: 800;
+    border: none;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+    text-transform: uppercase;
+    font-size: 0.9rem;
+    letter-spacing: 1px;
+}
+
+.mobile-menu li a.btn:hover {
+    background-color: #f3f4f6 !important;
+    transform: scale(1.05);
+    padding-left: 30px; /* On annule l'effet de décalage des liens normaux */
+}
+
+/* Animation d'ouverture */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(-10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
 @media (min-width: 1024px) {
     .nav-links {
         display: flex;
@@ -1429,4 +1494,5 @@ input[type="email"] {
     text-decoration: none;
     font-weight: bold;
     margin-top: 20px;
+
 }
