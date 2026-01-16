@@ -30,12 +30,12 @@ if ($supPos !== false) {
 
 if ($id_a_supprimer !== null) {
     try {
-        $stmt = $pdo->prepare("DELETE FROM missions WHERE id_missions = ?");
+        $stmt = $pdo->prepare("DELETE FROM missions WHERE id_mission = ?");
         $stmt->execute([$id_a_supprimer]);
         $message = "🗑️ Mission supprimée avec succès !";
         $message_type = "success";
     } catch (Exception $e) {
-        $message = "❌ Erreur lors de la suppression.";
+        $message = "❌ Erreur lors de la suppression " . $id_a_supprimer;
         $message_type = "error";
     }
 }
