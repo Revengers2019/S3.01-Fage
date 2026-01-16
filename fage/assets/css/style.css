@@ -193,6 +193,15 @@ img {
     from { opacity: 0; transform: translateY(-10px); }
     to { opacity: 1; transform: translateY(0); }
 }
+/* =========================================
+   CORRECTION : CACHER LE MENU MOBILE SUR PC
+   ========================================= */
+@media (min-width: 1024px) {
+    .mobile-menu, 
+    .mobile-menu.open {
+        display: none !important;
+    }
+}
 @media (min-width: 1024px) {
     .nav-links {
         display: flex;
@@ -1496,3 +1505,4 @@ input[type="email"] {
     margin-top: 20px;
 
 }
+
