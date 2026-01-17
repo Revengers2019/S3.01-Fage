@@ -31,7 +31,6 @@
             <h3>Vie Étudiante</h3>
             <ul>
                 <li><a href="?/=/scolarite">Scolarité & Précarité</a></li>
-                <li><a href="?/=/read?id=12">Coût de la rentrée</a></li>
             </ul>
         </div>
 
@@ -51,3 +50,4 @@
     </div>
 
 </footer>
+
