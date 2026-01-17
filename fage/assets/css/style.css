@@ -1550,39 +1550,3 @@ input[type="email"] {
     margin-top: 20px;
 
 }
-@media screen and (max-width: 768px) {
-
-        /* 1. On agrandit la barre pour que tout rentre */
-        .navbar {
-            height: auto !important; /* La hauteur s'adapte au contenu */
-            padding: 10px 0;
-        }
-
-        .nav-container {
-            flex-direction: column; /* On met le Nom au-dessus, les boutons en dessous */
-            gap: 10px;
-        }
-
-        /* 2. On FORCE l'affichage des liens (qui sont cachés par défaut sur mobile) */
-        .nav-links {
-            display: flex !important; /* Important pour écraser le style.css */
-            flex-direction: column;   /* Boutons l'un sous l'autre */
-            width: 100%;
-            gap: 10px;
-        }
-
-        /* 3. On rend les boutons bien larges et cliquables */
-        .nav-links a {
-            display: block;
-            text-align: center;
-            width: 100%;
-            padding: 10px !important;
-            margin: 0 !important; /* Enlève la marge droite du PC */
-            border-radius: 5px;
-        }
-
-        /* Petit fond transparent pour le lien "Retour" pour qu'on le voie mieux */
-        .nav-links a[href*="admin"] {
-            background-color: rgba(255, 255, 255, 0.1);
-        }
-    }
