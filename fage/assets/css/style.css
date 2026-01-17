@@ -1,11 +1,56 @@
-/* ==========================================================================
-   GLOBAL : CONFIGURATION GÉNÉRALE
-   (S'applique à TOUTES les pages : index.html, Fage.html, Droit.html, etc.)
-   ========================================================================== */
-
 /* =========================================
-   1. VARIABLES & RESET
+   CORRECTIF MOBILE : FORCER LE "DEZOOM"
    ========================================= */
+
+/* 1. On coupe tout ce qui dépasse à droite */
+html, body {
+    width: 100%;
+    max-width: 100%;
+    overflow-x: hidden !important; /* ULTRA IMPORTANT */
+    position: relative;
+}
+
+/* 2. On réduit les marges énormes sur mobile */
+@media screen and (max-width: 768px) {
+
+    /* On réduit le padding du conteneur principal */
+    .container {
+        padding: 2rem 1rem !important; /* Moins d'espace sur les côtés */
+        width: 100% !important;
+        max-width: 100vw !important; /* Force la largeur écran */
+    }
+
+    /* On force TOUTES les images et vidéos à rétrécir */
+    img, video, iframe, .card, .grid-2, .grid-3 {
+        max-width: 100% !important;
+        width: auto; /* Garde les proportions */
+        box-sizing: border-box;
+    }
+
+    /* On réduit la taille des gros titres qui peuvent élargir la page */
+    h1, h2, h3 {
+        word-wrap: break-word; /* Coupe les mots trop longs si besoin */
+        overflow-wrap: break-word;
+    }
+}
+/* FORCE LES BOITES À PRENDRE TOUTE LA LARGEUR */
+.info-box {
+    width: 100% !important; /* La commande magique */
+    box-sizing: border-box; /* Pour que le padding ne casse pas l'alignement */
+}
+/* FORCE L'EMPILEMENT SUR MOBILE (1 colonne au lieu de 2) */
+@media screen and (max-width: 768px) {
+    .grid-2 {
+        grid-template-columns: 1fr !important; /* 1 seule colonne */
+        gap: 20px;
+    }
+
+    /* On s'assure que les boîtes prennent toute la largeur */
+    .info-box {
+        width: 100% !important;
+        height: auto !important; /* La hauteur s'adapte au texte */
+    }
+}
 :root {
     --primary-blue: #3b82f6;
     --dark-blue: #2563eb;
@@ -197,7 +242,7 @@ img {
    CORRECTION : CACHER LE MENU MOBILE SUR PC
    ========================================= */
 @media (min-width: 1024px) {
-    .mobile-menu, 
+    .mobile-menu,
     .mobile-menu.open {
         display: none !important;
     }
@@ -1505,4 +1550,39 @@ input[type="email"] {
     margin-top: 20px;
 
 }
+@media screen and (max-width: 768px) {
 
+        /* 1. On agrandit la barre pour que tout rentre */
+        .navbar {
+            height: auto !important; /* La hauteur s'adapte au contenu */
+            padding: 10px 0;
+        }
+
+        .nav-container {
+            flex-direction: column; /* On met le Nom au-dessus, les boutons en dessous */
+            gap: 10px;
+        }
+
+        /* 2. On FORCE l'affichage des liens (qui sont cachés par défaut sur mobile) */
+        .nav-links {
+            display: flex !important; /* Important pour écraser le style.css */
+            flex-direction: column;   /* Boutons l'un sous l'autre */
+            width: 100%;
+            gap: 10px;
+        }
+
+        /* 3. On rend les boutons bien larges et cliquables */
+        .nav-links a {
+            display: block;
+            text-align: center;
+            width: 100%;
+            padding: 10px !important;
+            margin: 0 !important; /* Enlève la marge droite du PC */
+            border-radius: 5px;
+        }
+
+        /* Petit fond transparent pour le lien "Retour" pour qu'on le voie mieux */
+        .nav-links a[href*="admin"] {
+            background-color: rgba(255, 255, 255, 0.1);
+        }
+    }
