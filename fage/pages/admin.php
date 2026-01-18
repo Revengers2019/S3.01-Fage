@@ -37,6 +37,8 @@ require "includes/head.php";
     </nav>
 <main class="container" style="padding-top: 100px;">
         <h1 style="margin-bottom: 2rem; border-bottom:1px solid #e5e7eb; padding-bottom:1rem;">Tableau de bord</h1>
+        <a href="?/=/logout" class="btn btn-white">Déconnexion</a> <br><br>
+
 
         <div class="grid-2">
             <div class="card">
