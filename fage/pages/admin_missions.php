@@ -103,7 +103,7 @@ require "includes/head.php";
 
         <div class="form-card">
             <h2 style="color:#2563eb; margin-bottom: 20px; border-bottom:1px solid #eee; padding-bottom:10px;">
-                ➕ Créer une nouvelle Mission
+                ➕ Créer une nouvelle Mission <a href="?/=/admin" class="btn btn-white" style="text-decoration: underline">Retour</a>
             </h2>
 
             <form method="POST">
