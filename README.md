@@ -25,7 +25,7 @@ Groupe 205 :
 Pour faciliter la correction et les tests, nous avons déployé une version en ligne du site.
 **Vous pouvez y accéder directement ici :**
 
-👉 **[Voir le site en ligne (Hébergé sur InfinityFree)](https://projet-fage.rf.gd/index.php?/=/)**
+👉 **[Voir le site en ligne (Hébergé sur InfinityFree)](https://projet-fage.rf.gd/)**
 
 > **Note :** L'hébergement étant gratuit, il peut y avoir de légers temps de chargement. Si le site rencontre des instabilités, merci de vous référer au code source présent sur ce dépôt.
 
