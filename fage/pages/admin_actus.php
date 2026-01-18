@@ -104,7 +104,7 @@ require "includes/head.php";
         <div class="form-card">
             <h2
                 style="color:var(--primary-blue); margin-bottom: 20px; border-bottom:1px solid #eee; padding-bottom:10px;">
-                ➕ Ajouter une nouvelle actualité
+                ➕ Ajouter une nouvelle actualité <a href="?/=/admin" class="btn btn-white" style="text-decoration: underline">Retour</a>
             </h2>
 
             <form method="POST" action="?/=/actus_admin">
